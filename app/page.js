@@ -1,10 +1,12 @@
 'use client';
 
+import Banner from '@/components/banner/page.js'
+
 const page = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Banner />
+    </>
   )
 }
 

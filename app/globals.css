@@ -1,5 +1,74 @@
 @import "tailwindcss";
 
 @theme {
-  --color-light-yellow: #ffe25b; 
+  --color-light-yellow: #ffe25b;
+  --color-banner-green: #000e0d;
+  --color-para: #f2f2ee;
+  --color-nav-ele: #5d9060;
+}
+
+
+@keyframes slide {
+
+  0%,
+  20% {
+    transform: translateY(0px);
+  }
+
+  30%,
+  50% {
+    transform: translateY(-45px);
+  }
+
+  60%,
+  80% {
+    transform: translateY(-90px);
+  }
+
+  90%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-slide {
+  animation: slide 6s ease-in-out infinite;
+}
+
+@layer utilites {
+  .container {
+    @apply mx-auto px-4
+  }
+}
+
+
+
+
+@keyframes phonebannerslide {
+
+  0%,
+  20% {
+    transform: translateY(-5px);
+  }
+
+  30%,
+  50% {
+    transform: translateY(-45px);
+  }
+
+  60%,
+  80% {
+    transform: translateY(-80px);
+  }
+
+  90%,
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width:767.98px) {
+  .animate-slide {
+    animation: phonebannerslide 9s ease-in-out infinite;
+  }
 }
