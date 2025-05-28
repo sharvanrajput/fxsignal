@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-28",
+        "category": "Trading News",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-27",
+        "category": "Markets Moves",
+        "type": "crypto",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-26",
+        "category": "Markets Update",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-22",
+        "category": "Trading News",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-26",
+        "category": "Markets Update",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-27",
+        "category": "Markets Movers",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-26",
+        "category": "Markets Update",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 1,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Lorem ipsum dolor sit amet.",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
+        "date": "2025-05-26",
+        "category": "Markets Movers",
+        "type": "forex",
+        "admin": "Ruchit Thakur"
+    }
+]

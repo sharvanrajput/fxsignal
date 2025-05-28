@@ -19,6 +19,7 @@ export default function Button({ href, children, withicon, variant = 'primary' }
             <Link href={href} className={`${baseStyles, variants[variant]}`}>
               <span className='group-hover:translate-x-[0] translate-x-[10px] duration-300 ease-in-out'>  {children}</span> <RxArrowTopRight className='ms-2 group-hover:translate-x-[0] translate-x-[50px] duration-300 ease-in-out ' />
             </Link>
+            
         );
     } else {
         return (

@@ -1,0 +1,41 @@
+{   
+    "isPremiumclint": true,
+    "table_data" :  [
+        {
+            "pair_name": "EUR/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": 0.0021
+        },
+        {
+            "pair_name": "GBP/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": -0.0021
+        },
+        {
+            "pair_name": "EUR/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": 0.0021
+        },
+        {
+            "pair_name": "GBP/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": -0.0021
+        },
+        {
+            "pair_name": "EUR/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": 0.0021
+        },
+        {
+            "pair_name": "GBP/USD",
+            "entry_prise": "1.031",
+            "change": "0.000",
+            "persantage": 0.0021
+        }
+    ]
+}
