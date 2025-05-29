@@ -4,6 +4,7 @@ import Banner from '@/components/banner/page.jsx'
 import Bannerpoint from '@/components/bannerpoint/page.jsx'
 import Livesignal from '@/components/forexsignal/page.jsx'
 import Newsandreport from '@/components/news-and-report/page.jsx'
+import PrisingCards from '@/components/priseingCards/page.jsx'
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Bannerpoint />
       <Livesignal />
       <Newsandreport />
+      <PrisingCards />
     </>
   )
 }
