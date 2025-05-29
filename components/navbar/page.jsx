@@ -14,7 +14,7 @@ export default function Page() {
 
     return (
         <>
-            <nav className="bg-gray-700 bg-transparent backdrop-blur-lg shadow-md px-4 md:px-12 py-0 z-20 absolute w-full">
+            <nav className="bg-gray-700 bg-transparent backdrop-blur-lg shadow-md px-4 md: py-0 z-20 absolute w-full">
                 <span className=" absolute  inline-block w-full -z-10">
                     <span className="after:content-[''] after:hidden xl:after:block after:absolute after:top-0 after:right-0 after:w-[200px] after:h-[150px] after:bg-nav-ele after:blur-2xl after:block" />
                 </span>

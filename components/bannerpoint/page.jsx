@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import banner_icon_1 from "@/public/img/banner_point_1.png"
 import banner_icon_2 from "@/public/img/banner_point_2.png"

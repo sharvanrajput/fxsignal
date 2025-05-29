@@ -8,19 +8,36 @@
   --color-nav-ele: #5d9060;
   --color-bannepoint: #f9f8f5;
   --color-heading: #231f0c;
+  --color-heading-c1:#231f0c;
+  --color-heading-c2:#7e6b12;
+  --color-topbrocker-head:#22211c;
+  --color-topbrocker-body:#615f56;
 
 }
-body{
+
+body {
   overflow-x: hidden !important;
 }
+
 @layer utilites {
   .container {
-    @apply mx-auto px-4 
+    @apply mx-auto px-4 md:px-20
   }
   
+
+
 }
 
+  .swiper-pagination-bullet {
+    transition: all .5s;
+  }
 
+  /* Active bullet style */
+  .swiper-pagination-bullet-active {
+    width: 20px !important;
+    background-color: #ffe25b !important;
+    border-radius: 5px !important;
+  }
 
 
 @keyframes slide {
@@ -84,5 +101,6 @@ body{
 
 .tradingview-widget-container__widget {
   min-width: 100%;
-  height: 600px; /* adjust height as needed */
+  height: 600px;
+  /* adjust height as needed */
 }
