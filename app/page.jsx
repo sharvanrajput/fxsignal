@@ -5,6 +5,9 @@ import Bannerpoint from '@/components/bannerpoint/page.jsx'
 import Livesignal from '@/components/forexsignal/page.jsx'
 import Newsandreport from '@/components/news-and-report/page.jsx'
 import PrisingCards from '@/components/priseingCards/page.jsx'
+import Reviews from '@/components/reviews/page.jsx'
+import Blogs from '@/components/blogCard/page.jsx'
+import Cta1 from '@/components/Cta_1/page.jsx'
 
 const page = () => {
   return (
@@ -14,6 +17,9 @@ const page = () => {
       <Livesignal />
       <Newsandreport />
       <PrisingCards />
+      <Reviews />
+      <Blogs />
+      <Cta1 />
     </>
   )
 }

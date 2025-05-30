@@ -20,7 +20,7 @@ const page = () => {
                                     <li className="flex mt-5"><FaCheck className="bg-yellow-200 me-2 w-[30px] h-[30px] p-2 font-bold rounded-full" />Email & Telegram notifications</li>
                                 </ul>
                                 <div className="inline-block bg-gradient-to-tl w-full mt-5 from-light-yellow to-black p-[1px] rounded-full">
-                                    <button className="bg-white text-black w-full font-semibold py-2 px-4 rounded-full">
+                                    <button className="bg-white text-black w-full font-semibold py-2 px-4 rounded-full active:scale-[0.98] cursor-pointer">
                                        Get Basic Plan
                                     </button>
                                 </div>
@@ -41,7 +41,7 @@ const page = () => {
 
                                 </ul>
 
-                                <button className="bg-gradient-to-tl w-full mt-5 text-white from-light-yellow to-black font-semibold py-2 px-4 rounded-full">
+                                <button className="py-2 px-4 w-full text-center  cursor-pointer rounded-full bg-gradient-to-tl text-white text-lg mt-3 from-heading-c2 to-black active:scale-[0.98]">
                                    Get Premium Plan
                                 </button>
 
@@ -62,7 +62,7 @@ const page = () => {
 
                                 </ul>
                                 <div className="inline-block bg-gradient-to-tl w-full mt-5 from-light-yellow to-black p-[1px] rounded-full">
-                                    <button className="bg-white text-black w-full font-semibold py-2 px-4 rounded-full">
+                                    <button className="bg-white text-black w-full font-semibold py-2 px-4 rounded-full active:scale-[0.98] cursor-pointer">
                                        Get VIP Plan
                                     </button>
                                 </div>
