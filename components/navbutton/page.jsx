@@ -1,5 +1,5 @@
 // app/components/Button.jsx
-'use client';
+
 
 import Link from 'next/link';
 import { RxArrowTopRight } from "react-icons/rx";

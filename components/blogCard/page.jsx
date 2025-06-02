@@ -11,8 +11,8 @@ const page = () => {
         <>
             <section className="text-gray-600 body-font">
                 <div className="container  pb-[80px] mx-auto">
-                    <h2 className="text-4xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[200px] before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Success Stories</h2>
-                    <p className="text-para-dark my-5 text-lg">Real Results. Real Traders. See how FX Signals is transforming trading journeys worldwide!</p>
+                    <h2 className="text-4xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[200px] before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Learn Forex & Improve Your Trading</h2>
+                    <p className="text-para-dark my-5 text-lg">Free trading guides, market analysis, and expert webinars to help you succeed!</p>
 
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 -m-4">
                         {

@@ -117,10 +117,10 @@ const page = () => {
                         <p className="mt-5">© 2024 FX Signals. All rights reserved.</p>
                         <div className="links mt-5">
 
-                            <Link href={''} className="px-5 md:text-xl inline-block text-sm">Media Kit</Link>
-                            <Link href={''} className="px-5 md:text-xl inline-block text-sm">Terms & Conditions</Link>
-                            <Link href={''} className="px-5 md:text-xl inline-block text-sm">Privacy Policy</Link>
-                            <Link href={''} className="px-5 md:text-xl inline-block text-sm">Disclaimer</Link>
+                            <Link href={''} className="px-5 md:text-xl inline-block text-sm  relative before:absolute before:content-[''] before:right-0 before:bottom-0 before:h-[100%] before:w-[2px] before:bg-para-dark">Media Kit</Link>
+                            <Link href={''} className="px-5 md:text-xl inline-block text-sm  relative before:absolute before:content-[''] before:right-0 before:bottom-0 before:h-[100%] before:w-[2px] before:bg-para-dark">Terms & Conditions</Link>
+                            <Link href={''} className="px-5 md:text-xl inline-block text-sm  relative before:absolute before:content-[''] before:right-0 before:bottom-0 before:h-[100%] before:w-[2px] before:bg-para-dark">Privacy Policy</Link>
+                            <Link href={''} className="px-5 md:text-xl inline-block text-sm ">Disclaimer</Link>
                         </div>
                     </div>
                 </div>

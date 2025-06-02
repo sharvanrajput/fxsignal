@@ -7,17 +7,21 @@ import { Menu, X } from 'lucide-react'; // ✅ Import icons
 import logo from '@/public/img/fxsignal-dark-logo.png'
 import Image from 'next/image';
 import Button from '../navbutton/page';
+import { usePathname } from 'next/navigation';
 
 export default function Page() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    const pathname = usePathname()
+    
+
     return (
         <>
-            <nav className="bg-gray-700 bg-transparent backdrop-blur-lg shadow-md px-4 md: py-0 z-20 absolute w-full">
-                <span className=" absolute  inline-block w-full -z-10">
+            <nav className={` ${pathname == "/" ? " bg-gray-700 bg-transparent backdrop-blur-lg" : "bg-black" }  shadow-md px-4 md: py-0 z-20 absolute w-full`}>
+               { pathname == "/" && <span className=" absolute  inline-block w-full -z-10">
                     <span className="after:content-[''] after:hidden xl:after:block after:absolute after:top-0 after:right-0 after:w-[200px] after:h-[150px] after:bg-nav-ele after:blur-2xl after:block" />
-                </span>
+                </span> }
                 <div className="container flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className=" text-light-yellow">
@@ -26,11 +30,11 @@ export default function Page() {
 
                     {/* Middle Links */}
                     <ul className="hidden  xl:flex gap-8 text-gray-700 text-lg font-medium">
-                        <li><Link href="/" className="hover:text-yellow-100 text-white relative  group inline-block ">  <span className="relative z-10">About</span>
+                        <li><Link href="/about" className="hover:text-yellow-100 text-white relative  group inline-block ">  <span className="relative z-10">About</span>
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                             /></Link>
                         </li>
-                        <li><Link href="/about" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
+                        <li><Link href="/" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                             /></Link>
                         </li>
