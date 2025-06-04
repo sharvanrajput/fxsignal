@@ -38,7 +38,7 @@ const MissionSection = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               {card.title}
             </h3>
-            <p className="text-gray-600 text-sm">{card.description}</p>
+            <p className="text-gray-600 ">{card.description}</p>
           </div>
         ))}
       </div>
