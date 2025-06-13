@@ -2,81 +2,101 @@
     {
         "id": 1,
         "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-28",
+        "heading": "Forex Market Sees Major Shift",
+        "para": "The forex market experienced a significant shift amid global economic uncertainty.",
+        "date": "2025-06-12",
         "category": "Trading News",
         "type": "forex",
         "admin": "Ruchit Thakur"
     },
     {
-        "id": 1,
+        "id": 2,
         "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-27",
-        "category": "Markets Moves",
+        "heading": "USD/JPY Hits New High",
+        "para": "Strong US dollar performance continues to influence forex trends this week.",
+        "date": "2025-06-11",
+        "category": "Markets Update",
+        "type": "forex",
+        "admin": "Rekha Sharma"
+    },
+    {
+        "id": 3,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Indices Open Higher",
+        "para": "Global stock indices opened higher as investor sentiment improved.",
+        "date": "2025-06-10",
+        "category": "Market Pulse",
+        "type": "indices",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 4,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Indices Rally After Fed Comments",
+        "para": "Comments from the Fed sparked a rally in major indices across the globe.",
+        "date": "2025-06-09",
+        "category": "Trading News",
+        "type": "indices",
+        "admin": "Rekha Sharma"
+    },
+    {
+        "id": 5,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Gold and Oil Prices Surge",
+        "para": "Commodities like gold and crude oil rose due to geopolitical tensions.",
+        "date": "2025-06-08",
+        "category": "Markets Movers",
+        "type": "commodities",
+        "admin": "Ruchit Thakur"
+    },
+    {
+        "id": 6,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Commodities Stay Volatile",
+        "para": "Volatility continues in the commodities sector with unpredictable demand.",
+        "date": "2025-06-07",
+        "category": "Market Watch",
+        "type": "commodities",
+        "admin": "Rekha Sharma"
+    },
+    {
+        "id": 7,
+        "thumb_nail": "/img/news_1.png",
+        "heading": "Bitcoin Crosses $70K",
+        "para": "Crypto markets celebrate as Bitcoin reaches new all-time highs.",
+        "date": "2025-06-06",
+        "category": "Crypto News",
         "type": "crypto",
         "admin": "Ruchit Thakur"
     },
     {
-        "id": 1,
+        "id": 8,
         "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-26",
+        "heading": "Ethereum 2.0 Launch",
+        "para": "Ethereum's new upgrade has investors optimistic about crypto's future.",
+        "date": "2025-06-05",
         "category": "Markets Update",
-        "type": "forex",
-        "admin": "Ruchit Thakur"
+        "type": "crypto",
+        "admin": "Rekha Sharma"
     },
     {
-        "id": 1,
+        "id": 9,
         "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-22",
+        "heading": "Tech Stocks Lead Rally",
+        "para": "US tech stocks led a market rally on strong earnings reports.",
+        "date": "2025-06-12",
         "category": "Trading News",
-        "type": "forex",
+        "type": "stocks",
         "admin": "Ruchit Thakur"
     },
     {
-        "id": 1,
+        "id": 10,
         "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-26",
-        "category": "Markets Update",
-        "type": "forex",
-        "admin": "Ruchit Thakur"
-    },
-    {
-        "id": 1,
-        "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-27",
-        "category": "Markets Movers",
-        "type": "forex",
-        "admin": "Ruchit Thakur"
-    },
-    {
-        "id": 1,
-        "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-26",
-        "category": "Markets Update",
-        "type": "forex",
-        "admin": "Ruchit Thakur"
-    },
-    {
-        "id": 1,
-        "thumb_nail": "/img/news_1.png",
-        "heading": "Lorem ipsum dolor sit amet.",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos neque molestiae ipsum? Eius eligendi numquam maxime ullam aliquam. Maiores tempora facilis sint, corrupti nostrum ipsam architecto ab autem aperiam suscipit.",
-        "date": "2025-05-26",
-        "category": "Markets Movers",
-        "type": "forex",
-        "admin": "Ruchit Thakur"
+        "heading": "Global Stocks Rise",
+        "para": "Global stocks are trending higher amid easing inflation fears.",
+        "date": "2025-06-11",
+        "category": "Markets Moves",
+        "type": "stocks",
+        "admin": "Rekha Sharma"
     }
 ]

@@ -30,7 +30,7 @@ const MissionSection = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow"
+            className="bg-white border border-gray-200 rounded-lg  p-6 text-center  hover:shadow-[0_8px_0px_0px_#e8e2d5]  transition-shadow duration-300"
           >
             <div className="flex justify-center mb-4">
               <Image src={card.icon} alt={card.title} width={50} height={50} />

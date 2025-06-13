@@ -25,9 +25,6 @@ const page = () => {
     const [Newsrange, setNewsRange] = useState("Weekly")
 
 
-    const tabsicons = {
-        icon1: <CiGlobe />
-    }
 
     // Get today's date
     const today = new Date();

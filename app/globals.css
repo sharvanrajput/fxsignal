@@ -12,7 +12,7 @@
   --color-heading-c2:#7e6b12;
   --color-topbrocker-head:#22211c;
   --color-topbrocker-body:#615f56;
-
+  --color-team-hover:#FEF9E5;
 }
 
 body {
@@ -23,7 +23,11 @@ body {
   .container {
     @apply mx-auto px-4 md:px-20
   }
+  p{
+    @apply  text-lg
+  }
   
+ 
 
 
 }
