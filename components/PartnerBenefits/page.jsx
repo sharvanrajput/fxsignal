@@ -1,19 +1,19 @@
 const benefits = [
     {
         id: 1,
-        icon: "/icons/ad-icon.svg",
+        icon: "/img/partner_icon_1.png",
         title: "Exclusive Broker Advertising",
         description: "Get featured on FXSignals and increase brand awareness."
     },
     {
         id: 2,
-        icon: "/icons/registration-icon.svg",
+        icon: "/img/partner_icon_2.png",
         title: "Seamless Registration Process",
         description: "Quick onboarding and hassle-free promotion."
     },
     {
         id: 3,
-        icon: "/icons/growth-icon.svg",
+        icon: "/img/partner_icon_3.png",
         title: "Cost-Effective Growth",
         description: "No upfront costs, only performance-based exposure."
     }

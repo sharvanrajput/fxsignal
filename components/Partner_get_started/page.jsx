@@ -1,9 +1,13 @@
 import Image from "next/image";
 import partner_page_hero_img from "@/public/img/partner_started.png";
+import getstarted_icon_1 from "@/public/img/getstarted_icon_1.png";
+import getstarted_icon_2 from "@/public/img/getstarted_icon_2.png";
+import getstarted_icon_3 from "@/public/img/getstarted_icon_3.png";
+import getstarted_icon_4 from "@/public/img/getstarted_icon_4.png";
 
 const PartnerGetStarted = () => {
     return (
-        <section className="py-20">
+        <section className="pb-20">
             <div className="container">
                 <h2 className="text-4xl mb-3 font-bold ">How to Get Started?</h2>
                 <p className="text-para-dark mb-5">
@@ -20,10 +24,10 @@ const PartnerGetStarted = () => {
                                 <div className="relative pr-4 before:content-[''] before:absolute before:top-0 before:right-0 before:rounded-[50%] before:w-[3px] before:h-full before:bg-[#f2e9cc]">
                                     <span className="absolute top-0 left-0 text-[72px] text-[#f2e9cc] font-bold leading-none -mt-2 -ml-2 select-none">
                                         01
-                                        <img
-                                            src="/icons/key-icon.svg"
+                                        <Image
+                                            src={getstarted_icon_1}
                                             alt="Register"
-                                            className="w-8 h-8 mt-1"
+                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
 
@@ -44,10 +48,10 @@ const PartnerGetStarted = () => {
                                 <div className="relative pl-4">
                                     <span className="absolute top-0 left-0 text-[72px] text-[#f2e9cc] font-bold leading-none -mt-2 -ml-2 select-none">
                                         02
-                                        <img
-                                            src="/icons/verify-icon.svg"
+                                        <Image
+                                            src={getstarted_icon_2}
                                             alt="Get Approved"
-                                            className="w-8 h-8 mt-1"
+                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
                                     <div className="relative z-10 mt-30 flex items-start gap-3">
@@ -68,10 +72,10 @@ const PartnerGetStarted = () => {
                                 <div className="relative pr-4 before:content-[''] before:absolute before:top-0 before:right-0 before:rounded-[50%] before:w-[3px] before:h-full before:bg-[#f2e9cc]">
                                     <span className="absolute top-0 left-0 text-[72px] text-[#f2e9cc] font-bold leading-none -mt-2 -ml-2 select-none">
                                         01
-                                        <img
-                                            src="/icons/key-icon.svg"
+                                        <Image
+                                            src={getstarted_icon_3}
                                             alt="Register"
-                                            className="w-8 h-8 mt-1"
+                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
 
@@ -92,10 +96,10 @@ const PartnerGetStarted = () => {
                                 <div className="relative pl-4">
                                     <span className="absolute top-0 left-0 text-[72px] text-[#f2e9cc] font-bold leading-none -mt-2 -ml-2 select-none">
                                         02
-                                        <img
-                                            src="/icons/verify-icon.svg"
+                                        <Image
+                                            src={getstarted_icon_4}
                                             alt="Get Approved"
-                                            className="w-8 h-8 mt-1"
+                                            className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
                                     <div className="relative z-10 flex mt-30 items-start gap-3">

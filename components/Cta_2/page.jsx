@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Cta2 = () => {
   return (
-    <section className=" py-20">
+    <section className=" pb-20">
       <div className="container">
         <div className=" z-0 bg-gradient-to-r from-yellow-200 to-light-yellow rounded-4xl overflow-hidden">
           <div className="bg-[url('/img/cta2_bg.png')]  grid md:grid-cols-2 grid-cols-1 bg-cover bg-center bg-no-repeat md:px-20 md:pt-10  p-0 pb-2">
