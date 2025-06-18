@@ -3,35 +3,9 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
-const faqs = [
-  {
-    question: 'Who can register as a partner?',
-    answer:
-      'Any licensed Forex broker looking to expand their reach and attract more traders can register as a partner with FXSignals. Our platform is designed to help brokers gain visibility and credibility among active traders.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-];
 
-const FaqAccordion = () => {
+
+const FaqAccordion = ({faqs}) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {
@@ -40,7 +14,7 @@ const FaqAccordion = () => {
 
   return (
     <>
-      <section>
+      <section className='pt-20'>
         <div className="container pb-20">
           <h2 className="text-4xl mb-3 font-bold ">How to Get Started?</h2>
           <p className="text-para-dark mb-4">

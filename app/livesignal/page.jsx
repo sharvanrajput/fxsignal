@@ -1,9 +1,8 @@
-import PartnerAbout from '@/components/Partnerabout/page'
-import PartnerBenefits from '@/components/PartnerBenefits/page'
-import PartnerGetStarted from '@/components/Partner_get_started/page'
+import Howitswork from "@/components/livesignal_howitswork/Howitswork.jsx";
+import Signaltable from "@/components/signaltable/page.jsx";
+import PrisingCards from '@/components/priseingCards/page.jsx'
 import FaqAccordion from '@/components/Faq/page'
-import React from 'react'
-import Cta2 from '@/components/Cta_2/page'
+import Cta3 from "@/components/Cta_3/Cta3";
 
 const faqs = [
   {
@@ -33,18 +32,26 @@ const faqs = [
   },
 ];
 
-
-const PartnerPage = () => {
+const page = () => {
   return (
     <>
-        <PartnerAbout />
-        <PartnerBenefits />
-        <PartnerGetStarted />
-        <FaqAccordion faqs={faqs} />
-        <Cta2 />
+        <main>
+             <Signaltable />
+             <Howitswork />
+             <PrisingCards />
+             <FaqAccordion faqs={faqs} />
+             <Cta3 />
+
+
+
+
+        </main>
+        
+        
+
       
     </>
   )
 }
 
-export default PartnerPage
+export default page

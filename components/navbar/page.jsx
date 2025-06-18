@@ -34,11 +34,11 @@ export default function Page() {
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                             /></Link>
                         </li>
-                        <li><Link href="/" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
+                        <li><Link href="/livesignal" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                             /></Link>
                         </li>
-                        <li><Link href="/services" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Pricing</span>
+                        <li><Link href="/pricing" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Pricing</span>
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                             /></Link>
                         </li>

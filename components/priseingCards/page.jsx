@@ -6,7 +6,7 @@ const page = () => {
             <section className="pricing bg-topbrocker-head py-[80px]">
                 <div className="container">
                     <h2 className="text-4xl  bg-clip-text text-transparent font-bold inline-block relative bg-gradient-to-l from-yellow-200 to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Choose the Right Plan for Your Trading Success</h2>
-                    <p className="text-para-dark my-5 text-lg">Find a plan that fits your trading needs, whether you're a beginner or a seasoned trader. Gain access to expert forex signals, real-time market insights, and premium trading strategies.</p>
+                    <p className="text-para-dark my-5 text-xl">Find a plan that fits your trading needs, whether you're a beginner or a seasoned trader. Gain access to expert forex signals, real-time market insights, and premium trading strategies.</p>
                     <div className="grid md:grid-cols-8 lg:grid-cols-14  lg:gap-5 gap-4 ">
                         <div className="  md:col-span-4 lg:col-span-4">
                             <div className="prise_card bg-white   self-center h-full p-5 rounded-2xl">
