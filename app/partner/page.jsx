@@ -40,14 +40,14 @@ const faqs = {
 
 const PartnerPage = () => {
   return (
-    <>
+    <main>
       <PartnerAbout />
       <PartnerBenefits />
       <PartnerGetStarted />
       <FaqAccordion faqs={faqs.faq} heading={faqs.head} subhead={faqs.subhead} />
       <Cta2 />
 
-    </>
+    </main>
   )
 }
 

@@ -10,8 +10,8 @@ export default function Button({ href, children, withicon, variant = 'primary' }
     const baseStyles = ' rounded transition font-medium ';
 
     const variants = {
-        primary: 'bg-light-yellow text-black px-5 py-2 lg:w-auto  md:w-[25%] w-[50%] flex items-center group overflow-hidden  rounded-sm ',
-        outline: 'border border-light-yellow px-5 py-2 lg:w-auto  md:w-[25%] w-[50%] flex items-center group  overflow-hidden rounded-sm text-light-yellow ',
+        primary: 'bg-light-yellow text-black  px-5 py-2 lg:w-auto   w-[50%] flex items-center group overflow-hidden  rounded-sm ',
+        outline: 'border border-light-yellow  px-5 py-2 lg:w-auto   w-[50%] flex items-center group  overflow-hidden rounded-sm text-light-yellow ',
     };
 
     if (withicon) {

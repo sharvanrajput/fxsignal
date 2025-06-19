@@ -40,7 +40,7 @@ const faqs = {
 
 const page = () => {
   return (
-    <>
+    <main>
       <Pricingabout />
       <Why_premium />
       <PrisingCards />
@@ -49,7 +49,7 @@ const page = () => {
       <FaqAccordion faqs={faqs.faq} heading={faqs.head} subhead={faqs.subhead} />
       <Cta4 />
 
-    </>
+    </main>
   )
 }
 

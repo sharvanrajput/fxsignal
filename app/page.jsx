@@ -11,7 +11,7 @@ import Cta1 from '@/components/Cta_1/page.jsx'
 
 const page = () => {
   return (
-    <>
+    <main>
       <Banner />
       <Bannerpoint />
       <Livesignal />
@@ -20,7 +20,7 @@ const page = () => {
       <Reviews />
       <Blogs />
       <Cta1 />
-    </>
+    </main>
   )
 }
 

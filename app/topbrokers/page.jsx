@@ -9,7 +9,7 @@ import Signaltable from "@/components/signaltable/page.jsx";
 
 const page = () => {
     return (
-        <>
+        <main>
             <section className="py-50">
                 <div className="container">
                     <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
@@ -44,7 +44,7 @@ const page = () => {
             </section>
 
 
-        </>
+        </main>
     )
 }
 
