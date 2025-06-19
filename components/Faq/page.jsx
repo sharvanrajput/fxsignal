@@ -5,7 +5,7 @@ import { Plus, Minus } from 'lucide-react';
 
 
 
-const FaqAccordion = ({faqs}) => {
+const FaqAccordion = ({heading,subhead,faqs}) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {
@@ -16,9 +16,9 @@ const FaqAccordion = ({faqs}) => {
     <>
       <section className='pt-20'>
         <div className="container pb-20">
-          <h2 className="text-4xl mb-3 font-bold ">How to Get Started?</h2>
+          <h2 className="text-4xl mb-3 font-bold ">{heading}</h2>
           <p className="text-para-dark mb-4">
-            Joining FXSignals as a partner is quick and hassle-free.
+            {subhead}
           </p>
 
           <div className=" mx-auto   space-y-4">

@@ -21,9 +21,9 @@ const benefits = [
 const Why_premium = () => {
   return (
     <>
-     <section className="pb-20 bg-[#fffdfa]">
+     <section className="pb-30 pt-10 bg-[#fffdfa]">
             <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-15">
                     Why Choose FXSignals Premium?
                 </h2>
              
