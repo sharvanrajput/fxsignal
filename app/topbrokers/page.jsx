@@ -31,7 +31,7 @@ const page = () => {
                             <Offerslider />
                             <CurencyConvertor />
 
-                            <AdvertiseWithus />
+                            <AdvertiseWithus className="mt-4" />
                             <Downloadapp />
 
 

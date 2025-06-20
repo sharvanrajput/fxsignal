@@ -104,7 +104,7 @@ const NewsList = () => {
                             {/* Image */}
                             <div className="w-full md:w-[200px] h-auto overflow-hidden mb-2 rounded-lg">
                                 <Image
-                                    src={`${import.meta.env.NEXT_PUBLIC_API_URL}/uploads/news/${ele.news_image}`}
+                                    src={`${process.env.NEXT_PUBLIC_BASEURL}/uploads/news/${ele.news_image}`}
                                     width={200}
                                     height={100}
                                     className="w-full h-auto object-cover rounded-lg"

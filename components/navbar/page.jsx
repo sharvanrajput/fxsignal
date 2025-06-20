@@ -118,7 +118,7 @@ export default function Page() {
             icon: '/img/dropdown_tools_3.png',
             name: 'Currency Converter',
             description: 'Identify trading opportunities with AI-driven analysis',
-            path: '/tools'
+            path: '/currenty-converter'
         },
         {
             icon: '/img/dropdown_tools_4.png',

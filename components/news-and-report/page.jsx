@@ -42,7 +42,7 @@ const page = () => {
                              <CurencyConvertor />
                              <Topbrocker />
                              <Downloadapp />
-                             <AdvertiseWithus />
+                             <AdvertiseWithus className="mt-4" />
 
 
                         </div>
