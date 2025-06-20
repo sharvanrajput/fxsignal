@@ -10,11 +10,17 @@ import { FaChartLine } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { TbCaretUpDownFilled } from "react-icons/tb";
+import { useGetNewsQuery } from '@/services/newsreportSlice';
 
 const NewsList = () => {
-    const [newsData, setNewsData] = useState([]);
+
     const [active, setActive] = useState("All");
     const [newsRange, setNewsRange] = useState("Today");
+
+    const { data } = useGetNewsQuery();
+    const newsData = data?.news || []; // ✅ FIXED LINE
+
+
 
     const tabs = [
         { label: "All", icon: <FaGlobe /> },
@@ -25,17 +31,9 @@ const NewsList = () => {
 
     const api = process.env.NEXT_PUBLIC_BASEURL
 
-    useEffect(() => {
-        const fetchNewsData = async () => {
-            try {
-                const response = await axios.get(`${api}/admin/news/news_view`);
-                setNewsData(response.data.news);
-            } catch (error) {
-                console.error("Error fetching news:", error);
-            }
-        };
-        fetchNewsData();
-    }, []);
+
+
+
 
 
     // Date filter setup
