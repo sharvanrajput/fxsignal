@@ -5,7 +5,7 @@ import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
 import NewsList from '@/components/news_list/page';
 import Topbrocker from "@/components/topbrockertable/page.jsx";
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
-import Signaltable from "@/components/signaltable/page.jsx";
+
 
 const page = () => {
     return (
@@ -37,7 +37,7 @@ const page = () => {
 
                         </div>
                     </div>
-                    <Signaltable />
+                  
                 </div>
 
 

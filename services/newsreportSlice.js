@@ -2,9 +2,9 @@
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const api = createApi({
+export const newsreportSlice = createApi({
   reducerPath: 'api', // optional custom key in the store
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
+   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_BASEURL }),
   endpoints: (builder) => ({
     getNews: builder.query({
       query: () => '/admin/news/news_view', // endpoint path
@@ -13,4 +13,4 @@ export const api = createApi({
   }),
 });
 
-export const { useGetNewsQuery } = api;
+export const { useGetNewsQuery } = newsreportSlice;

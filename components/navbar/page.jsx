@@ -31,13 +31,13 @@ export default function Page() {
             icon: "/img/dropdown_about_2.png",
             name: "Partner with us",
             description: "Grow with Us, Partner for Success",
-            path: "/about"
+            path: "/partner"
         },
         Brokers: {
             icon: "/img/dropdown_about_3.png",
             name: "Brokers",
             description: "Trade with Top-Tier Brokers",
-            path: "/about"
+            path: "/topbrokers"
         }
     }
 
@@ -221,9 +221,9 @@ export default function Page() {
 
                     {/* Middle Links */}
                     <ul className="hidden  xl:flex gap-8 text-gray-700 text-lg font-medium">
-                        <li className='group relative inline-block'><Link href="/about" className="hover:text-yellow-100 text-white  relative   ">  <span className="relative z-10">About</span>
+                        <li className='group relative inline-block'><div className="hover:text-yellow-100 cursor-pointer text-white  relative   ">  <span className="relative z-10">About</span>
                             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
-                            /></Link>
+                            /></div>
                             <ul className="absolute left-0 top-[20px] mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-[350px]">
                                 {
                                     Object.values(aboutdropdown).map((item, index) => (

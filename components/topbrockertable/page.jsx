@@ -6,26 +6,21 @@ import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import Link from "next/link"
+import { useGetTopBrokersQuery } from "@/services/topBorckerSlice"
 
 const topborcker_in_uae = 'Top Brokers in United Arab Emirates'
 
 const Page = () => {
     const path = usePathname()
-    const [topbroker, setTopbroker] = useState([])
 
-    const api = process.env.NEXT_PUBLIC_BASEURL
 
-    useEffect(() => {
-        const fetchTopBrokers = async () => {
-            const res = await axios.get(`${api}/admin/broker/broker_view`)
-            // Safely access and set the broker array
-           
-            console.log("Fetched broker data:", res.data.broker)
-            setTopbroker(res.data.broker)
-        }
 
-        fetchTopBrokers()
-    }, [])
+    const { data, isLoading } = useGetTopBrokersQuery();
+    const topbroker = data?.broker || [];
+
+
+   
+
 
     return (
         <div className="topbrocker bg-[#f9f9f9] pb-10 rounded-bl-2xl px-5 rounded-br-2xl">
@@ -49,7 +44,7 @@ const Page = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {topbroker.length === 0 ? (
+                            {isLoading ? (
                                 <tr>
                                     <td colSpan="3" >
                                         <div className="loader mx-auto mt-5"></div>
@@ -67,7 +62,7 @@ const Page = () => {
                                                 <td className="border border-white text-white px-3 py-4">{ele.company_name}</td>
                                                 <td className="border border-white px-3 py-4">
                                                     <Link href={ele.website_url}>
-                                                    <button className="py-2 px-4 text-black bg-yellow-300 rounded-lg cursor-pointer active:scale-[0.9]">Trade</button>
+                                                        <button className="py-2 px-4 text-black bg-yellow-300 rounded-lg cursor-pointer active:scale-[0.9]">Trade</button>
                                                     </Link>
                                                 </td>
                                             </tr>
@@ -80,7 +75,7 @@ const Page = () => {
                                             <td className="border border-white text-white px-3 py-4">{ele.company_name}</td>
                                             <td className="border border-white px-3 py-4">
                                                 <Link href={ele.website_url}>
-                                                <button className="py-2 px-4 text-black bg-yellow-300 rounded-lg cursor-pointer active:scale-[0.9]">Trade</button>
+                                                    <button className="py-2 px-4 text-black bg-yellow-300 rounded-lg cursor-pointer active:scale-[0.9]">Trade</button>
                                                 </Link>
                                             </td>
                                         </tr>
