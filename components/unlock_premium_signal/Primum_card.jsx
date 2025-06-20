@@ -6,7 +6,7 @@ import unlock_premium_card from '@/public/img/unlock_premium_card.png'
 
 const Primum_card = () => {
   return (
-   <div className="  mx-auto bg-[#2F2A22]  rounded-3xl py-20 text-white text-center my-5">
+   <div className="  mx-auto bg-[#2F2A22]  rounded-3xl py-10 text-white text-center ">
       <div className="w-full mb-4">
         <Image
           src={unlock_premium_card}
@@ -24,15 +24,15 @@ const Primum_card = () => {
       <ul className="flex flex-col justify-center items-center gap-3  mb-4 text-left">
         <li className="flex text-lg items-center gap-2 text-para">
           <FaCheckCircle className="text-yellow-400" />
-          High-Accuracy Forex Signals
+          <span >High-Accuracy Forex Signals </span>
         </li>
         <li className="flex text-lg items-center gap-2 text-para">
           <FaCheckCircle className="text-yellow-400" />
-          Real-Time Market Updates
+          <span >Real-Time Market Updates </span>
         </li>
         <li className="flex text-lg items-center gap-2 text-para">
           <FaCheckCircle className="text-yellow-400" />
-          Secure & Fast Transactions
+         <span > Secure & Fast Transactions </span>
         </li>
       </ul>
 

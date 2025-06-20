@@ -57,7 +57,7 @@ const Page = () => {
                                         if (i < 1) {
                                             return <tr key={i} className="bg-topbrocker-body" >
                                                 <td className="border border-white px-3 py-4">
-                                                    <Image src={`http://localhost:5000/uploads/broker-img/${ele.broker_image}`} width={130} height={50} alt="logo" />
+                                                    <Image src={`${import.meta.env.NEXT_PUBLIC_API_URL}/uploads/broker-img/${ele.broker_image}`} width={130} height={50} alt="logo" />
                                                 </td>
                                                 <td className="border border-white text-white px-3 py-4">{ele.company_name}</td>
                                                 <td className="border border-white px-3 py-4">
@@ -70,7 +70,7 @@ const Page = () => {
                                     } else {
                                         return <tr key={i} className="bg-topbrocker-body" >
                                             <td className="border border-white px-3 py-4">
-                                                <Image src={`http://localhost:5000/uploads/broker-img/${ele.broker_image}`} width={130} height={50} alt="logo" />
+                                                <Image src={`${import.meta.env.NEXT_PUBLIC_API_URL}/uploads/broker-img/${ele.broker_image}`} width={130} height={50} alt="logo" />
                                             </td>
                                             <td className="border border-white text-white px-3 py-4">{ele.company_name}</td>
                                             <td className="border border-white px-3 py-4">

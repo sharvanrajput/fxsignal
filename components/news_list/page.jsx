@@ -29,7 +29,7 @@ const NewsList = () => {
         { label: "Market Updates", icon: <FaBullhorn className="text-red-500" /> },
     ];
 
-    const api = process.env.NEXT_PUBLIC_BASEURL
+
 
 
 
@@ -104,7 +104,7 @@ const NewsList = () => {
                             {/* Image */}
                             <div className="w-full md:w-[200px] h-auto overflow-hidden mb-2 rounded-lg">
                                 <Image
-                                    src={`http://localhost:5000/uploads/news/${ele.news_image}`}
+                                    src={`${import.meta.env.NEXT_PUBLIC_API_URL}/uploads/news/${ele.news_image}`}
                                     width={200}
                                     height={100}
                                     className="w-full h-auto object-cover rounded-lg"

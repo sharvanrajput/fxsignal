@@ -1,18 +1,16 @@
 "use client";
 import { useEffect } from "react";
 
-
-const page = () => {
-
+const Page = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js';
+    const script = document.createElement("script");
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
     script.async = true;
-    script.type = 'text/javascript'; // optional but good
+    script.type = "text/javascript";
 
     script.textContent = JSON.stringify({
       width: "100%",
-      height: "400",
+      height: "500",
       symbolsGroups: [
         {
           name: "Indices",
@@ -66,21 +64,18 @@ const page = () => {
       backgroundColor: "#131722",
     });
 
-    const container = document.querySelector('.tradingview-widget-container__widget');
+    const container = document.querySelector(".tradingview-widget-container__widget");
     if (container) {
-      container.innerHTML = ''; // Clear any existing script
+      container.innerHTML = ""; // Clear existing
       container.appendChild(script);
     }
   }, []);
 
-
   return (
-    <div className="tradingview-widget-container w-full">
-      <div className="tradingview-widget-container__widget" />
-      
+    <div className="tradingview-widget-container w-full h-[500px] rounded-2xl overflow-hidden">
+      <div className="tradingview-widget-container__widget w-full " />
     </div>
-  )
-}
+  );
+};
 
-export default page
-
+export default Page;
