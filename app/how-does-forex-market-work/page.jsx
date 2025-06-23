@@ -1,4 +1,4 @@
-import History_And_Evaluation from '@/public/img/History_And_Evaluation.webp';
+import How_Does_Forex_Market_Work from '@/public/img/How_Does_Forex_Market_Work.webp';
 import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
@@ -30,7 +30,7 @@ const page = () => {
                                     <p className='mb-10'>Think of it like a carnival carousel. The more people want to ride a particular horse (currency), the higher the ticket price (exchange rate) gets. But if the horse is less popular, the price goes down.</p>
 
 
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={How_Does_Forex_Market_Work} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <h2 className='text-3xl mb-5 font-semibold'>Who Rides the Forex Carousel?</h2>
                                     <p className='mb-10'>

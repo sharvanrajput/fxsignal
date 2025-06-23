@@ -1,4 +1,4 @@
-import History_And_Evaluation from '@/public/img/History_And_Evaluation.webp';
+import Importance_And_Role from '@/public/img/Importance_And_Role.webp';
 import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
@@ -29,7 +29,7 @@ const page = () => {
                                         <strong></strong>
                                     </p>
 
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={Importance_And_Role} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <p className='mb-10'>
                                         <strong>Price Discovery and Risk Management: </strong>Forex markets provide a platform for determining exchange rates based on supply and demand dynamics. These rates serve as benchmarks for pricing goods, services, and financial instruments internationally. Additionally, Forex markets offer tools such as derivatives and forward contracts, which allow businesses to hedge against currency risk, protecting them from adverse movements in exchange rates.

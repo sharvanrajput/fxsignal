@@ -1,4 +1,4 @@
-import History_And_Evaluation from '@/public/img/History_And_Evaluation.webp';
+import Types_of_Lots from '@/public/img/Types_of_Lots.webp';
 import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
@@ -38,7 +38,7 @@ const page = () => {
                                     </p>
 
 
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={Types_of_Lots} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <p className='mb-10'>
                                         Now, let's put this into action with a daily example. Imagine you're trading EUR/USD (Euro/US Dollar), and the current exchange rate is 1.2000. You're feeling bullish on the Euro and decide to buy one standard lot of EUR/USD. That means you're buying 100,000 Euros, which will cost you $120,000 (100,000 * 1.2000).

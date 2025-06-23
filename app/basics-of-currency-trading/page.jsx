@@ -1,4 +1,4 @@
-import History_And_Evaluation from '@/public/img/History_And_Evaluation.webp';
+import How_Currency from '@/public/img/How_Currency.webp';
 import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
@@ -30,7 +30,7 @@ const page = () => {
                                     <p className='mb-10'>For example, imagine you believe the U.S. dollar will strengthen against the euro in the coming weeks. You would buy U.S. dollars and sell euros. If the dollar does indeed rise in value versus the euro, you could then sell your dollars for more euros than you originally spent—pocketing the difference as profit.</p>
 
 
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={How_Currency} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <h2 className='text-3xl mb-5 font-semibold'>Getting Started With Currency Trading</h2>
                                     <p className='mb-10'>
@@ -43,7 +43,7 @@ const page = () => {
                                     <p className='mb-10'>
                                         The beauty (and maybe the beast?) of currency trading is that it's a 24-hour market. News events happening anywhere in the world can cause currency values to fluctuate. This means you have the potential to trade day and night, but it also requires constant vigilance.
                                     </p>
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={How_Currency} alt="Learn Forex" width={600} height={600} className='mb-10' />
                                     <h2 className='text-3xl mb-5 font-semibold'>Ready to Test Your Trading Mettle?</h2>
                                     <p className='mb-10'>
                                         Remember, currency trading can be risky, so it's crucial to start with a demo account and learn the ropes before venturing into real markets. This thrilling adventure awaits the informed and courageous.

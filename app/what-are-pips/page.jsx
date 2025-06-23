@@ -1,4 +1,4 @@
-import History_And_Evaluation from '@/public/img/History_And_Evaluation.webp';
+import what_are_pip from '@/public/img/what_are_pip.webp';
 import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
@@ -23,7 +23,7 @@ const page = () => {
                                     <p className='mb-10'>Imagine you're at a flea market, haggling over a vintage watch. Every penny counts and the smallest price change can tip the scales. That's the world of Forex trading, where fortunes are won and lost on tiny movements called pips.</p>
                                     
 
-                                    <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
+                                    <Image src={what_are_pip} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <h2 className='text-3xl mb-5 font-semibold'>What are Pips?</h2>
                                     <p className='mb-10'>
