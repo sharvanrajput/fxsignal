@@ -124,7 +124,7 @@ export default function Page() {
             icon: '/img/dropdown_tools_4.png',
             name: 'Heat Map & Cross Rates',
             description: 'Minimize risks and maximize profits smartly',
-            path: '/tools'
+            path: '/headmap-exchangerate'
         }
     ];
 

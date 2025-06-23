@@ -4,7 +4,7 @@ const page = () => {
     return (
         <main>
 
-            <section className="pt-50 pb-10 ">
+            <section className="pt-50 pb-10 bg-[url('/img/tools_pages_banner_shape.png')] bg-cover bg-center bg-no-repeat">
                 <div className="container">
                     <h5 className='text-light-yellow font-bold'>Currency Converter</h5>
                     <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Real-Time Currency Conversion for Smart Trading</h2>
