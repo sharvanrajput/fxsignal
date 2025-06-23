@@ -10,7 +10,7 @@ const page = () => {
           <h2 className="text-4xl text-heading-c1  font-bold inline-block relative z-10">
             Real-Time Currency Conversion for Smart Trading
           </h2>
-          <p className="text-para-dark mb-6 mt-5 mb-10 text-lg">
+          <p className="text-para-dark  mt-5 mb-10 text-lg">
             Instantly convert major currencies with live exchange rates.
           </p>
           <h4 className="text-2xl text-heading font-bold mb-10"> Heatmap</h4>
