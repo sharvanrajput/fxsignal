@@ -10,7 +10,7 @@ const Forex_related_article = () => {
 
       <ul className=' mb-5'>
         <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="/history-and-evaluation">History & Evaluation </Link></li>
-        <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="">Importance & Rules </Link></li>
+        <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="/importance-and-role">Importance & Rules </Link></li>
         <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="">What are lots in Forex ?</Link></li>
         <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="">What are Pips in the Forex ?</Link></li>
         <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3      text-heading-c1 rounded-full' href="">How does Forex Market Work ? </Link></li>
