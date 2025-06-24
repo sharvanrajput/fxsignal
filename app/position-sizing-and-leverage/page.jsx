@@ -42,7 +42,8 @@ const page = () => {
                             <h3 className='text-3xl mb-5 font-semibold'>Combining Position Sizing and Leverage</h3>
                             <p className='mb-10'>When used in conjunction, position sizing and leverage can be a powerful tool for managing risk and maximizing returns. By carefully considering both factors, traders can create a well-balanced portfolio that aligns with their investment goals and risk profile.</p>
 
-                            <h3 className='text-3xl mb-5 font-semibold'></h3>
+                            <h3 className='text-3xl mb-5 font-semibold'>Here are some key principles to keep in mind when combining position sizing and leverage:
+                            </h3>
                             <ul>
                                 <li><strong>Adjust position size based on leverage: </strong>As leverage increases, position size should decrease to maintain a consistent risk level.
                                 </li>
@@ -52,7 +53,7 @@ const page = () => {
                                 <li><strong>Set stop-loss orders:</strong>  Protect your capital by placing stop-loss orders at predetermined levels to limit potential losses.</li>
                                 <li><strong>Monitor market conditions: </strong> Adjust your leverage and position sizing based on market volatility and your confidence in the trade.</li>
                             </ul>
-<Image src={beginner_guide_forex_img} alt="Learn Forex" width={500} height={500} />
+                            <Image src={beginner_guide_forex_img} alt="Learn Forex" width={500} height={500} />
                         </div>
                         <div className='col-span-2'>
                             <div className="mb-5">
