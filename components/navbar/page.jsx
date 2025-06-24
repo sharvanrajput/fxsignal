@@ -145,7 +145,7 @@ export default function Page() {
             icon: '/img/dropdown_learnforex_3.png',
             name: 'Technical & Fundamental Analysis',
             description: 'Identify trading opportunities with AI-driven analysis',
-            path: '/learnforex'
+            path: '/technical-and-fundamental'
         },
         {
             icon: '/img/dropdown_learnforex_4.png',
