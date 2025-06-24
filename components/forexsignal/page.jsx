@@ -96,7 +96,7 @@ const page = () => {
                             </div>
                         </div>
                         <div className="col-span-2">
-                            <div className=" bg-[#1f1f1f] px-3 py-2 rounded-xl overflow-hidden">
+                            <div className=" bg-[#1f1f1f] ">
                                 <Widgets1 />
                             </div>
                         </div>
