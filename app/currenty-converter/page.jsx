@@ -28,7 +28,7 @@ const page = () => {
 
                         {/* Text */}
                         <p className="text-sm leading-relaxed">
-                          We use third party resources & the mid-market rate for our Converter. This is for informational purposes only. We don't claim this is exact exchange rate.
+                            We use third party resources & the mid-market rate for our Converter. This is for informational purposes only. We don't claim this is exact exchange rate.
                         </p>
                     </div>
                 </div>

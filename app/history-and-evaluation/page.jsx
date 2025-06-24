@@ -24,45 +24,45 @@ const page = () => {
                                 <h2 className='text-3xl mb-5 font-semibold'>Brief History</h2>
                                 <p className='mb-10'>The origins of Forex can be traced back to ancient times when traders and merchants first recognized the need to exchange currencies to facilitate international commerce. However, it was not until the late 19th century that the foundations of the modern Forex market were laid. The establishment of the gold standard and the emergence of major financial centers like London paved the way for more organized and centralized currency trading.</p>
 
-                            <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10'  />
+                                <Image src={History_And_Evaluation} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
 
                                 <h2 className='text-3xl mb-5 font-semibold'>The Bretton Woods System</h2>
                                 <p className='mb-10'>A pivotal moment in Forex history came in 1944 with the Bretton Woods Agreement, which introduced a new international monetary system. Under this system, currencies were pegged to the U.S. dollar, which was itself backed by gold. This arrangement provided stability in the postwar era but ultimately proved unsustainable as economic imbalances grew.</p>
-                                
+
                                 <h2 className='text-3xl mb-5 font-semibold'>The Birth of Free-Floating Currencies</h2>
                                 <p className='mb-10'>In the early 1970s, the Bretton Woods system collapsed, ushering in a new era of free-floating currencies. This momentous shift allowed exchange rates to fluctuate based on market forces of supply and demand, setting the stage for the modern Forex market as we know it today. Traders and investors could now speculate on currency movements, giving rise to a thriving and dynamic global marketplace.</p>
-                                
+
                                 <h2 className='text-3xl mb-5 font-semibold'>Technological Innovations</h2>
                                 <p className='mb-10'>The Forex market's evolution has been profoundly shaped by technological advancements. The introduction of electronic trading platforms, high-speed internet connectivity, and sophisticated trading tools have transformed the landscape, making Forex accessible to a broader audience and enabling lightning-fast transactions across the globe.</p>
-                                
+
                                 <h2 className='text-3xl mb-5 font-semibold'>The Rise of Retail Forex Trading</h2>
                                 <p className='mb-10'>While Forex was once the exclusive domain of large financial institutions and corporations, the advent of online trading platforms and the democratization of financial markets have opened the doors to retail investors. Today, millions of individuals around the world participate in the Forex market, taking advantage of its liquidity, leverage, and 24-hour trading opportunities.</p>
-                                
+
                                 <h2 className='text-3xl mb-5 font-semibold'>Regulation and Oversight</h2>
                                 <p className='mb-10'>As the Forex market grew in size and significance, regulatory bodies emerged to establish rules, promote transparency, and protect market participants. Organizations like the Bank for International Settlements (BIS) and national regulators play crucial roles in overseeing the Forex industry, ensuring fair practices and mitigating systemic risks.</p>
-                                
+
                                 <h2 className='text-3xl mb-5 font-semibold'>The Future of Forex</h2>
                                 <p className='mb-10'>The Forex market's future is inextricably linked to global economic trends, technological innovations, and regulatory developments. As the world becomes increasingly interconnected and digitalized, the Forex market is poised to evolve further, adapting to new challenges and opportunities. Emerging technologies like blockchain and artificial intelligence are expected to revolutionize the way currencies are traded, while global events and geopolitical shifts will continue to influence market dynamics.</p>
                                 <p className='mb-10'>Whether you're a seasoned trader or a newcomer to the world of Forex, understanding the rich history and evolution of this market is essential. At FXSignals, we are committed to providing you with the latest insights, strategies, and tools to navigate the ever-changing Forex landscape successfully. Join our community of traders and embark on your own Forex journey, guided by our expertise and supported by cutting-edge resources. Explore our offerings today and unlock the full potential of the global currency markets.
 
-</p>
-                                
+                                </p>
+
                             </div>
 
                         </div>
                         <div className='col-span-2'>
                             <div className="mb-5">
-                                 <Widgets1 />
+                                <Widgets1 />
                             </div>
                             <div className="mb-5">
-                                 <Forex_related_article className="mt-4" />
+                                <Forex_related_article className="mt-4" />
                             </div>
                             <div className="mb-5">
-                                 <AdvertiseWithus className="mt-4" />
+                                <AdvertiseWithus className="mt-4" />
                             </div>
                             <div className="mb-5">
-                                 <Primum_card />
+                                <Primum_card />
                             </div>
 
                         </div>

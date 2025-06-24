@@ -19,7 +19,7 @@ const page = () => {
                             <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Beginner’s Guide to Forex</h2>
                             <p className="text-para-dark mb-6 mt-5 text-lg">Start Your Trading Journey with Confidence</p>
 
-                           
+
 
 
                             <h3 className='text-3xl mb-5 font-semibold'>Fundamental And Technical</h3>

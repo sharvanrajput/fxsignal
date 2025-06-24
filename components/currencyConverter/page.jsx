@@ -80,7 +80,7 @@ const Page = () => {
             <option key={cur} value={cur}>{cur}</option>
           ))}
         </select>
-          <div className="div col-span-2"></div>
+        <div className="div col-span-2"></div>
         <select
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}

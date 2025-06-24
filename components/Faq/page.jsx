@@ -5,7 +5,7 @@ import { Plus, Minus } from 'lucide-react';
 
 
 
-const FaqAccordion = ({heading,subhead,faqs}) => {
+const FaqAccordion = ({ heading, subhead, faqs }) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {

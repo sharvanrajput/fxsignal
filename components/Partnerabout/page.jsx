@@ -19,11 +19,11 @@ const PartnerAbout = () => {
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                     <div className='self-center'>
                         <h1 className="text-4xl text-pretty font-bold">
-                           Partner with FXSignals & 
+                            Partner with FXSignals &
                             <span className="text-light-yellow"> Grow Your Business</span>
                         </h1>
                         <p className="text-para-dark text-lg py-3 mb-4">
-                           Expand your reach, attract more traders, and maximize your revenue with our exclusive partner and brokerage solutions.
+                            Expand your reach, attract more traders, and maximize your revenue with our exclusive partner and brokerage solutions.
                         </p>
                         <Toprightarrowbutton btntext={"Register as Partner"} />
                         <p className='text-para-dark flex items-center mt-4 '>
@@ -40,7 +40,7 @@ const PartnerAbout = () => {
                     </div>
                 </div>
 
-            
+
             </div>
         </section>
     );

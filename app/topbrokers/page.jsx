@@ -18,7 +18,7 @@ const page = () => {
                             <p className="text-para-dark mb-6 mt-5 text-lg">Partnering with the Best to Enhance Your Trading Experience</p>
                             <div className="mb-4">
 
-                                <Topbrocker  />
+                                <Topbrocker />
                             </div>
                             {/* <br /> */}
                             <NewsList />
@@ -37,7 +37,7 @@ const page = () => {
 
                         </div>
                     </div>
-                  
+
                 </div>
 
 

@@ -31,20 +31,20 @@ const page = () => {
           </p>
 
           <ul className="space-y-3">
-           
-              <li  className="flex items-center text-gray-700">
-                <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
-                Real-time forex signals
-              </li>
-              <li  className="flex items-center text-gray-700">
-                <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
-                Precise trading insights
-              </li>
-              <li  className="flex items-center text-gray-700">
-                <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
-                Trusted by thousands of traders globally
-              </li>
-          
+
+            <li className="flex items-center text-gray-700">
+              <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
+              Real-time forex signals
+            </li>
+            <li className="flex items-center text-gray-700">
+              <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
+              Precise trading insights
+            </li>
+            <li className="flex items-center text-gray-700">
+              <BsCheckCircleFill className="text-yellow-400 mr-2 text-lg" />
+              Trusted by thousands of traders globally
+            </li>
+
           </ul>
         </div>
       </div>

@@ -39,20 +39,20 @@ const faqs = {
 const page = () => {
   return (
     <>
-        <main>
-             <Signaltable />
-             <Howitswork />
-             <PrisingCards />
-             <FaqAccordion faqs={faqs.faq} heading={faqs.head} subhead={faqs.subhead} />
-             <Cta3 />
+      <main>
+        <Signaltable />
+        <Howitswork />
+        <PrisingCards />
+        <FaqAccordion faqs={faqs.faq} heading={faqs.head} subhead={faqs.subhead} />
+        <Cta3 />
 
 
 
-        </main>
-        
-        
+      </main>
 
-      
+
+
+
     </>
   )
 }

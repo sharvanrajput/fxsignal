@@ -150,22 +150,22 @@ const signaltable = () => {
                 <div></div>
                 <div className="flex items-center justify-end gap-4">
                   <button className="flex items-center gap-1 bg-[#EBE8DE] px-4 py-2  rounded-md text-sm">
-                  ← Previous
-                </button>
-                <div className="flex gap-1">
-                  {[1, 2, 3, "...", 8, 9, 10].map((num) => (
-                    <button
-                      key={num}
-                      className={`w-8 h-8 rounded-md text-sm ${num === page ? "bg-yellow-400 text-white" : "bg-gray-100"}`}
-                      onClick={() => setPage(num)}
-                    >
-                      {num}
-                    </button>
-                  ))}
-                </div>
-                <button className="flex items-center bg-[#EBE8DE] gap-1 px-4 py-2  rounded-md text-sm">
-                  Next →
-                </button>
+                    ← Previous
+                  </button>
+                  <div className="flex gap-1">
+                    {[1, 2, 3, "...", 8, 9, 10].map((num) => (
+                      <button
+                        key={num}
+                        className={`w-8 h-8 rounded-md text-sm ${num === page ? "bg-yellow-400 text-white" : "bg-gray-100"}`}
+                        onClick={() => setPage(num)}
+                      >
+                        {num}
+                      </button>
+                    ))}
+                  </div>
+                  <button className="flex items-center bg-[#EBE8DE] gap-1 px-4 py-2  rounded-md text-sm">
+                    Next →
+                  </button>
                 </div>
               </div>
             </div>

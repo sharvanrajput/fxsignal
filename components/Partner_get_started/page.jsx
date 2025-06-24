@@ -27,7 +27,7 @@ const PartnerGetStarted = () => {
                                         <Image
                                             src={getstarted_icon_1}
                                             alt="Register"
-                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
+                                            className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
 
@@ -51,7 +51,7 @@ const PartnerGetStarted = () => {
                                         <Image
                                             src={getstarted_icon_2}
                                             alt="Get Approved"
-                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
+                                            className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
                                     <div className="relative z-10 mt-30 flex items-start gap-3">
@@ -75,7 +75,7 @@ const PartnerGetStarted = () => {
                                         <Image
                                             src={getstarted_icon_3}
                                             alt="Register"
-                                             className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
+                                            className="w-10 h-10 mt-1 translate-x-[30%] translate-y-[-50%]"
                                         />
                                     </span>
 

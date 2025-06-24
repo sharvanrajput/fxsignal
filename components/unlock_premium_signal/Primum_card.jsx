@@ -6,7 +6,7 @@ import unlock_premium_card from '@/public/img/unlock_premium_card.png'
 
 const Primum_card = () => {
   return (
-   <div className="  mx-auto bg-[#2F2A22]  rounded-3xl py-10 text-white text-center ">
+    <div className="  mx-auto bg-[#2F2A22]  rounded-3xl py-10 text-white text-center ">
       <div className="w-full mb-4">
         <Image
           src={unlock_premium_card}
@@ -32,7 +32,7 @@ const Primum_card = () => {
         </li>
         <li className="flex text-lg items-center gap-2 text-para">
           <FaCheckCircle className="text-yellow-400" />
-         <span > Secure & Fast Transactions </span>
+          <span > Secure & Fast Transactions </span>
         </li>
       </ul>
 

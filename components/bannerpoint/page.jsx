@@ -33,7 +33,7 @@ const page = () => {
                 <div className="container grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-4">
 
                     {
-                        bannerpoints.map((ele,i) => {
+                        bannerpoints.map((ele, i) => {
                             return (
                                 <div key={i} className="point_box flex flex-col items-center sm:items-left md:flex-row justify-center gap-3 py-3 px-5">
                                     <div className="icon">

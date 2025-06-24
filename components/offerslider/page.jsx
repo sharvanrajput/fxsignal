@@ -17,18 +17,18 @@ const page = () => {
   return (
     <div className="w-full max-w-4xl mx-auto py-10">
       <Swiper
-        modules={[ Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
-        
+
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
       >
-        {[slide1, slide2 ,slide3].map((ele,i) => (
+        {[slide1, slide2, slide3].map((ele, i) => (
           <SwiperSlide key={i}>
             <div className=" rounded-xl pb-10 text-center text-xl font-semibold shadow-lg">
-              <Image src={ele} width={100+"%"} height={"auto"} alt="slider" />
+              <Image src={ele} width={100 + "%"} height={"auto"} alt="slider" />
             </div>
           </SwiperSlide>
         ))}

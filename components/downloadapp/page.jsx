@@ -18,13 +18,13 @@ const page = () => {
                 <div className="flex  flex-wrap  justify-between  gap-3">
                     <Image
                         src={playstore}
-                       
+
                         className="h-auto w-full max-w-[220px]"
                         alt="playstore"
                     />
                     <Image
                         src={appstore}
-                       
+
                         className="h-auto w-full max-w-[220px]"
                         alt="appstore"
                     />

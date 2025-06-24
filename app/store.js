@@ -7,10 +7,10 @@ import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
-    [newsreportSlice.reducerPath]: newsreportSlice.reducer, 
+    [newsreportSlice.reducerPath]: newsreportSlice.reducer,
     [topBrokerApi.reducerPath]: topBrokerApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware), 
+    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware),
 });
 export default store;

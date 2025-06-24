@@ -1,6 +1,6 @@
-{   
+{
     "isPremiumclint": true,
-    "table_data" :  [
+    "table_data": [
         {
             "pair_name": "EUR/USD",
             "entry_prise": "1.031",

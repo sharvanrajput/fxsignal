@@ -20,22 +20,22 @@ const faqs = {
       answer:
         'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
     },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-  {
-    question: 'How does FXSignals promote registered brokers?',
-    answer:
-      'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
-  },
-]
+    {
+      question: 'How does FXSignals promote registered brokers?',
+      answer:
+        'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
+    },
+    {
+      question: 'How does FXSignals promote registered brokers?',
+      answer:
+        'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
+    },
+    {
+      question: 'How does FXSignals promote registered brokers?',
+      answer:
+        'We offer featured placements, advertising, and direct lead support to help registered brokers grow their client base efficiently.',
+    },
+  ]
 }
 
 const page = () => {

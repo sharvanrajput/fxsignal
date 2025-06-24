@@ -17,7 +17,7 @@ const page = () => {
                             <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Beginner’s Guide to Forex</h2>
                             <p className="text-para-dark mb-6 mt-5 text-lg">Start Your Trading Journey with Confidence</p>
 
-                            <Image src={beginner_guide_forex_img} alt="Learn Forex" width={500} height={500}  />
+                            <Image src={beginner_guide_forex_img} alt="Learn Forex" width={500} height={500} />
 
                             <div className="disc ">
                                 <h2 className='text-3xl mb-5 font-semibold'>What is Forex?</h2>
@@ -33,16 +33,16 @@ const page = () => {
                         </div>
                         <div className='col-span-2'>
                             <div className="mb-5">
-                                 <Widgets1 />
+                                <Widgets1 />
                             </div>
                             <div className="mb-5">
-                                 <Forex_related_article className="mt-4" />
+                                <Forex_related_article className="mt-4" />
                             </div>
                             <div className="mb-5">
-                                 <AdvertiseWithus className="mt-4" />
+                                <AdvertiseWithus className="mt-4" />
                             </div>
                             <div className="mb-5">
-                                 <Primum_card />
+                                <Primum_card />
                             </div>
 
                         </div>

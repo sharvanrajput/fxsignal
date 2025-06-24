@@ -13,7 +13,7 @@ const page = () => {
                     <p className="text-para-dark mb-6 mt-5 text-lg">Get live updates on Forex, Stocks, Commodities, and Indices to make informed trading decisions.</p>
 
                     <div className="">
-                       <EconomicCalander />
+                        <EconomicCalander />
                     </div>
 
                 </div>

@@ -1,30 +1,30 @@
 [
   {
     "date": "2025-05-29",
-    "thumb":"/img/blog1.png",
+    "thumb": "/img/blog1.png",
     "heading": "Mastering Forex Trading in 2025",
     "para": "Explore the key strategies and tools every modern forex trader must know to succeed in today's volatile market.",
-    "admin":"admin"
+    "admin": "admin"
   },
   {
     "date": "2025-05-25",
-    "thumb":"/img/blog1.png",
+    "thumb": "/img/blog1.png",
     "heading": "Top 5 Indicators for Smarter Trading",
     "para": "From RSI to MACD, these indicators can help you make data-driven decisions and boost trading accuracy.",
-    "admin":"admin"
+    "admin": "admin"
   },
   {
     "date": "2025-05-20",
-    "thumb":"/img/blog1.png",
+    "thumb": "/img/blog1.png",
     "heading": "Beginner’s Guide to Currency Pairs",
     "para": "Learn how major, minor, and exotic currency pairs work and which ones to focus on as a new trader.",
-    "admin":"admin"
+    "admin": "admin"
   },
   {
     "date": "2025-05-15",
-    "thumb":"/img/blog1.png",
+    "thumb": "/img/blog1.png",
     "heading": "Why Risk Management Matters in Forex",
     "para": "Discover how to preserve your capital and maximize profits using solid risk management principles.",
-    "admin":"admin"
+    "admin": "admin"
   }
 ]
