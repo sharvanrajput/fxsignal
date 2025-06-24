@@ -1,6 +1,4 @@
 
-import beginner_guide_forex_img from '@/public/img/beginner_guide_forex_img.png';
-import Image from 'next/image';
 import Widgets1 from "@/components/widgets/widget1/page.jsx";
 import AdvertiseWithus from '@/components/advertiseWithUs/page.jsx';
 import Primum_card from '@/components/unlock_premium_signal/Primum_card.jsx';
