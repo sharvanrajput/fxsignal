@@ -20,20 +20,20 @@ const page = () => {
 
                                 <div className="disc ">
                                     <h2 className='text-3xl mb-5 font-semibold'>Conquering The Pips: The Mini Moves Making Big Money In Forex</h2>
-                                    <p className='mb-10'>Imagine you're at a flea market, haggling over a vintage watch. Every penny counts and the smallest price change can tip the scales. That's the world of Forex trading, where fortunes are won and lost on tiny movements called pips.</p>
+                                    <p className='mb-5'>Imagine you're at a flea market, haggling over a vintage watch. Every penny counts and the smallest price change can tip the scales. That's the world of Forex trading, where fortunes are won and lost on tiny movements called pips.</p>
 
 
                                     <Image src={what_are_pip} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <h2 className='text-3xl mb-5 font-semibold'>What are Pips?</h2>
-                                    <p className='mb-10'>
+                                    <p className='mb-5'>
                                         Think of pips as the building blocks of currency movements. A pip (short for "percentage in point") represents the smallest possible change in a currency pair's exchange rate. For most major currencies, it's the fourth decimal place, equivalent to a minuscule 0.0001.
 
 
                                     </p>
                                     <h2 className='text-3xl mb-5 font-semibold'>Let's Decipher Pips with a Grocery Analogy:
                                     </h2>
-                                    <p className='mb-10'>
+                                    <p className='mb-5'>
                                         Picture yourself at the supermarket, meticulously comparing prices. You notice a carton of milk priced at $2.3450. Now, imagine the store can adjust prices by fractions of a cent! That's the realm of pips in Forex. A tiny movement of 0.0001, though seemingly insignificant, can significantly impact your trade over time.
 
 

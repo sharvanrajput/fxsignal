@@ -20,20 +20,20 @@ const page = () => {
 
                                 <div className="disc ">
                                     <h2 className='text-3xl mb-5 font-semibold'>How Does Forex Market Work?</h2>
-                                    <p className='mb-10'>Imagine a vibrant global dance floor where currencies sway to the rhythms of political events, economic data, and trader sentiment. This is the foreign exchange (Forex) market, a financial arena that operates 24 hours a day, five days a week, with a staggering average daily trading volume exceeding $6.6 trillion. In this mesmerizing world, every step matters, and understanding the intricate movements is the key to success.</p>
-                                    <p className='mb-10'>In simple Terms, Forex is a never-sleeping marketplace where countries barter their own currencies. No stacks of bills or awkward exchanges, just a digital dance of value constantly in flux.</p>
-                                    <p className='mb-10'>Intrigued? Buckle up, because we're about to dive into the inner workings of this fascinating system that underpins international trade and travel,
+                                    <p className='mb-5'>Imagine a vibrant global dance floor where currencies sway to the rhythms of political events, economic data, and trader sentiment. This is the foreign exchange (Forex) market, a financial arena that operates 24 hours a day, five days a week, with a staggering average daily trading volume exceeding $6.6 trillion. In this mesmerizing world, every step matters, and understanding the intricate movements is the key to success.</p>
+                                    <p className='mb-5'>In simple Terms, Forex is a never-sleeping marketplace where countries barter their own currencies. No stacks of bills or awkward exchanges, just a digital dance of value constantly in flux.</p>
+                                    <p className='mb-5'>Intrigued? Buckle up, because we're about to dive into the inner workings of this fascinating system that underpins international trade and travel,
 
                                     </p>
                                     <h2 className='text-3xl mb-5 font-semibold'>How Forex Works</h2>
-                                    <p className='mb-10'>The core principle of Forex is simple: supply and demand. When demand for one currency rises against another, its value goes up. Conversely, if demand falls, its value dips.</p>
-                                    <p className='mb-10'>Think of it like a carnival carousel. The more people want to ride a particular horse (currency), the higher the ticket price (exchange rate) gets. But if the horse is less popular, the price goes down.</p>
+                                    <p className='mb-5'>The core principle of Forex is simple: supply and demand. When demand for one currency rises against another, its value goes up. Conversely, if demand falls, its value dips.</p>
+                                    <p className='mb-5'>Think of it like a carnival carousel. The more people want to ride a particular horse (currency), the higher the ticket price (exchange rate) gets. But if the horse is less popular, the price goes down.</p>
 
 
                                     <Image src={How_Does_Forex_Market_Work} alt="Learn Forex" width={600} height={600} className='mb-10' />
 
                                     <h2 className='text-3xl mb-5 font-semibold'>Who Rides the Forex Carousel?</h2>
-                                    <p className='mb-10'>
+                                    <p className='mb-5'>
                                         Think of pips as the building blocks of currency movements. A pip (short for "percentage in point") represents the smallest possible change in a currency pair's exchange rate. For most major currencies, it's the fourth decimal place, equivalent to a minuscule 0.0001.
 
 
