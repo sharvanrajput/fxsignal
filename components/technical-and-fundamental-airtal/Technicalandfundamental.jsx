@@ -13,7 +13,7 @@ const Technicalandfundamental = () => {
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="/position-sizing-and-leverage">Position Sizing & Leverage </Link></li>
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="/setting-stop-loss-and-take-profit"> Setting Stop-loss & take profit</Link></li>
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="/managing-psychology">Managing Psychology </Link></li>
-                <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="">Volatile Market mitigation </Link></li>
+                <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="/volatile-market-mitigation">Volatile Market mitigation </Link></li>
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="">Psychological Barriers </Link></li>
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href="">Economic Indicators </Link></li>
                 <li className='inline-block mt-7 me-2'> <Link className=' bg-[#eeead6] px-4 text-sm py-3 text-heading-c1 rounded-full' href=""> Chart Types</Link></li>

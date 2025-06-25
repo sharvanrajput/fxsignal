@@ -151,7 +151,7 @@ export default function Page() {
             icon: '/img/dropdown_learnforex_4.png',
             name: 'Blog',
             description: 'Get Trending Market Insights',
-            path: '/learnforex'
+            path: '/blog'
         }
     ];
 
