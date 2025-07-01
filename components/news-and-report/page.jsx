@@ -27,17 +27,17 @@ const page = () => {
 
             <section className="nesw_and_report pb-[80px]  ">
                 <div className="container">
-                    <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
-                        <div className="col-span-3">
-                            <h2 className="text-4xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[200px] before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Market Overview</h2>
+                    <h2 className="text-4xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[200px] before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Market Overview</h2>
                             <p className="text-para-dark my-5 text-lg">Stay ahead of the markets with real-time insights, expert analysis, and trending updates.</p>
 
+                    <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
+                        <div className="col-span-3">
+                            
                             <NewsList />
-
 
                         </div>
                         <div className="col-span-2">
-                            {/* offer slider  */}
+                           
                             <Offerslider />
                             <CurencyConvertor />
                             <Topbrocker />

@@ -4,6 +4,7 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { Globe, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa6';
 
 const categories = [
   { name: 'All', icon: <Globe size={16} /> },
@@ -127,7 +128,7 @@ const Allblog = () => {
                 </p>
 
                 <Link href={`/blog/${blog.slug.toLowerCase().split(" ").join("-")}`} className="inline-flex items-center gap-2 cursor-pointer bg-light-yellow text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition">
-                  Read More <span className="text-xl">→</span>
+                  Read More <span className="text-xl"><FaArrowRight /></span>
                 </Link>
               </div>
             </div>

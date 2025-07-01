@@ -61,7 +61,7 @@ export default function Page() {
             icon: '/img/dropdown_market_1.png',
             name: 'Market Overview',
             description: 'Stay updated with key market trends and insights',
-            path: '/market/overview'
+            path: '/market-overview'
         },
         {
             icon: '/img/dropdown_market_2.png',

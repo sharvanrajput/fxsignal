@@ -11,14 +11,17 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { TbCaretUpDownFilled } from "react-icons/tb";
 import { useGetNewsQuery } from '@/services/newsreportSlice';
+import Link from 'next/link';
 
 const NewsList = () => {
 
     const [active, setActive] = useState("All");
     const [newsRange, setNewsRange] = useState("Today");
 
-    const { data } = useGetNewsQuery();
+    const { data, isLoading } = useGetNewsQuery();
     const newsData = data?.news || []; // ✅ FIXED LINE
+
+   
 
 
 
@@ -28,12 +31,6 @@ const NewsList = () => {
         { label: "Market Movers", icon: <FaMoneyBillWave className="text-green-500" /> },
         { label: "Market Updates", icon: <FaBullhorn className="text-red-500" /> },
     ];
-
-
-
-
-
-
 
 
     // Date filter setup
@@ -58,10 +55,14 @@ const NewsList = () => {
         return categoryMatch;
     });
 
+    
+
     // Toggle range button
     const toggleRange = () => {
         setNewsRange((prev) => (prev === "Today" ? "Weekly" : "Today"));
     };
+
+    if (isLoading) return <div className='loading'></div>;
 
     return (
         <div className="p-6 border-2 border-gray-200 rounded-2xl">
@@ -82,7 +83,7 @@ const NewsList = () => {
                     <button
                         key={tab.label}
                         onClick={() => setActive(tab.label)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all
+                        className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-all
               ${active === tab.label ? 'bg-[#3c2f00] text-white' : 'bg-gray-100 text-black'}`}
                     >
                         {tab.label} {tab.icon}
@@ -92,13 +93,7 @@ const NewsList = () => {
 
             {/* Scrollable News List */}
             <div className="h-[1300px] overflow-y-scroll mt-4 pr-2">
-                {filteredNews.length === 0 ? (
-                    <div className="h-50 grid place-items-center">
-
-                        <div className="loader"></div>
-                    </div>
-
-                ) : (
+                {(
                     filteredNews.map((ele, index) => (
                         <div key={index} className="mb-6 border-b border-b-gray-300 pb-4">
                             {/* Image */}
@@ -113,7 +108,10 @@ const NewsList = () => {
                             </div>
 
                             {/* Title */}
-                            <h4 className="text-xl font-bold mb-2">{ele.title}</h4>
+                            <Link href={`newsdetail/${ele.title.toLowerCase().split(" ").join("-")}`}>
+                                <h4 className="text-xl font-bold mb-2 cursor-pointer">{ele.title}</h4>
+                            </Link>
+
 
                             {/* Description */}
                             <p className="bg-gray-100 p-3 pb-1 rounded mb-2 line-clamp-2">

@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto py-10">
+    <div className="w-full max-w-4xl mx-auto ">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
