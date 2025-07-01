@@ -10,11 +10,11 @@ const page = () => {
 
   return (
     <main className="bg-gray-50">
-    <Blogslider />
-    <Recentblog />
-    <Allblog />
-    <Cta4 />
-      
+      <Blogslider />
+      <Recentblog />
+      <Allblog />
+      <Cta4 />
+
     </main>
   )
 }

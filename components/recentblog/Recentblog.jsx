@@ -13,7 +13,7 @@ const Recentblog = () => {
 
     const blogList = data?.blog || [];
     const recentFourBlogs = blogList.slice(0, 4); // ✅ cleaner than filter with index
-    console.log(recentFourBlogs)
+    console.log("recent blog ",blogList)
     return (
         <>
             <section className="recentblog pb-20">

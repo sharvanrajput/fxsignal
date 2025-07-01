@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MdOutlineDateRange } from "react-icons/md";
 import { Globe, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const categories = [
   { name: 'All', icon: <Globe size={16} /> },
@@ -125,9 +126,9 @@ const Allblog = () => {
                   {blog.blog_desc.replace(/<[^>]*>/g, "").slice(0, 80)}
                 </p>
 
-                <button className="inline-flex items-center gap-2 bg-light-yellow text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition">
+                <Link href={`/blog/${blog.slug.toLowerCase().split(" ").join("-")}`} className="inline-flex items-center gap-2 cursor-pointer bg-light-yellow text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition">
                   Read More <span className="text-xl">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           ))}
