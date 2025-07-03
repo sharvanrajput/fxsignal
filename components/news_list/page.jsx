@@ -92,7 +92,7 @@ const NewsList = () => {
             </div>
 
             {/* Scrollable News List */}
-            <div className="h-[1300px] overflow-y-scroll mt-4 pr-2">
+            <div className="h-[1100px] overflow-y-scroll mt-4 pr-2">
                 {(
                     filteredNews.map((ele, index) => (
                         <div key={index} className="mb-6 border-b border-b-gray-300 pb-4">

@@ -17,7 +17,7 @@ const Topstories = () => {
       isTransparent: false,
       locale: "en",
       width: "100%",
-      height: 350,
+      height: 486,
     });
 
     if (containerRef.current) {
@@ -27,7 +27,7 @@ const Topstories = () => {
   }, []);
     return (
         <>
-            <div className="tradingview-widget-container">
+            <div className="tradingview-widget-container h-[486px] w-full">
                 <div ref={containerRef} className="tradingview-widget-container__widget" />
                
             </div>
