@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MdOutlineDateRange } from "react-icons/md";
 
 import React from 'react'
+import Link from 'next/link';
 
 const Recentblog = () => {
     const { data, isLoading, isError } = useGetBlogsQuery();
@@ -13,7 +14,7 @@ const Recentblog = () => {
 
     const blogList = data?.blog || [];
     const recentFourBlogs = blogList.slice(0, 4); // ✅ cleaner than filter with index
-    console.log("recent blog ",blogList)
+    console.log("recent blog ", blogList)
     return (
         <>
             <section className="recentblog pb-20">
@@ -35,7 +36,9 @@ const Recentblog = () => {
                                             </div>
                                             <div className="disc self-center ">
                                                 <div className='flex items-center mb-2' ><MdOutlineDateRange className='me-2 text-xl text-light-yellow' /> <span className="text-para-dark"> {blog.blog_date.split("T")[0]} </span></div>
-                                                <h3 className="text-2xl font-semibold">{blog.blog_name}</h3>
+                                                <Link href={`/blog/${blog.slug.toLowerCase().split(" ").join("-")}`}>
+                                                    <h3 className="text-2xl font-semibold">{blog.blog_name}</h3>
+                                                </Link>
 
                                             </div>
                                         </div>

@@ -21,7 +21,7 @@ const NewsList = () => {
     const { data, isLoading } = useGetNewsQuery();
     const newsData = data?.news || []; // ✅ FIXED LINE
 
-   
+
 
 
 
@@ -55,7 +55,7 @@ const NewsList = () => {
         return categoryMatch;
     });
 
-    
+
 
     // Toggle range button
     const toggleRange = () => {

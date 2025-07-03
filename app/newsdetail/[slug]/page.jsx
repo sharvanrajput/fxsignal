@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react";
 import { useGetNewsQuery } from "@/services/newsreportSlice";
 import Image from "next/image";
 import { useParams } from "next/navigation"
@@ -21,6 +22,24 @@ const page = () => {
     console.log(singleNews)
 
     if (isLoading) return <div className='loading'></div>;
+
+
+    useEffect(() => {
+        // Set document title
+        document.title = singleNews.title;
+
+        // Set meta description
+        let metaDesc = document.querySelector("meta[name='description']");
+        if (metaDesc) {
+            metaDesc.setAttribute("content", singleNews.news_desc);
+        } else {
+            // If not found, create it
+            metaDesc = document.createElement("meta");
+            metaDesc.name = "description";
+            metaDesc.content = singleNews.news_desc;
+            document.head.appendChild(metaDesc);
+        }
+    }, [singleNews.title, singleNews.description]);
 
     return (
         <>

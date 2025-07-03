@@ -9,9 +9,10 @@ import { apiUrl, useGetBlogsQuery } from '@/services/blogSlice';
 import { MdOutlineDateRange } from 'react-icons/md';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const Page = () => {
-  
+
   const params = useParams();
   const { data, isLoading, isError } = useGetBlogsQuery();
 
@@ -28,6 +29,7 @@ const Page = () => {
 
   const recentTowBlog = data?.blog?.slice(1, 3); // ✅ cleaner than filter with index
 
+
   return (
     <>
       <section className="blog_disc pt-50 pb-20">
@@ -37,8 +39,8 @@ const Page = () => {
               <Blogdisc blog={singleblog} />
             </div>
             <div className="col-span-2 space-y-4">
-            <h2 className="text-3xl  font-bold ">Recent Blogs</h2>
-            <p>Explore the most recent trading insights, strategies, and news.</p>
+              <h2 className="text-3xl  font-bold ">Recent Blogs</h2>
+              <p>Explore the most recent trading insights, strategies, and news.</p>
               <div className="grid grid-cols-1 gap-3">
                 {
                   recentTowBlog.map((blog) => (

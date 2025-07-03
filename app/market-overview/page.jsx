@@ -20,6 +20,7 @@ const page = () => {
                         <div className="col-span-2">
 
                             <Topstories />
+                            
 
                         </div>
                     </div>
