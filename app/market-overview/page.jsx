@@ -1,4 +1,5 @@
 import NewsList from '@/components/news_list/page'
+import Tradingideas from '@/components/trading-ideas/Tradingideas'
 import Weeklyairtal from '@/components/weekly_artical/Weeklyairtal'
 import Topstories from '@/components/widgets/top-stories/Topstories'
 import Image from 'next/image'
@@ -31,6 +32,7 @@ const page = () => {
                     </div>
                 </div>
             </section>
+            <Tradingideas />
         </main>
     )
 }

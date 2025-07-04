@@ -110,14 +110,14 @@ const NewsList = () => {
                             {/* Title */}
                             <Link href={`newsdetail/${ele.title.toLowerCase().split(" ").join("-")}`}>
                                 <h4 className="text-xl font-bold mb-2 cursor-pointer">{ele.title}</h4>
+
+
+
+                                {/* Description */}
+                                <p className="bg-gray-100 p-3 pb-1 rounded mb-2 line-clamp-2">
+                                    {ele.news_desc?.replace(/<[^>]+>/g, '').replace(/&[^;]+;/g, '')}
+                                </p>
                             </Link>
-
-
-                            {/* Description */}
-                            <p className="bg-gray-100 p-3 pb-1 rounded mb-2 line-clamp-2">
-                                {ele.news_desc?.replace(/<[^>]+>/g, '').replace(/&[^;]+;/g, '')}
-                            </p>
-
                             {/* Meta Info */}
                             <div className="text-sm text-gray-600 flex flex-wrap gap-4 items-center">
                                 <span className="flex items-center">
