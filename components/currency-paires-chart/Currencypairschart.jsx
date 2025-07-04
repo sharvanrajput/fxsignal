@@ -44,7 +44,7 @@ const Currencypairschart = () => {
                 {symbols.map((item) => (
                     <button
                         key={item.value}
-                        className={`px-4 py-1 font-semibold rounded-full ${selectedSymbol === item.value ? 'bg-[#eeead6] text-black ' : 'bg-white border text-black'
+                        className={`px-4 py-1 text-sm font-semibold rounded-full ${selectedSymbol === item.value ? 'bg-[#eeead6] text-black ' : 'bg-white border text-black'
                             }`}
                         onClick={() => setSelectedSymbol(item.value)}
                     >

@@ -47,15 +47,15 @@ const Cryptochart = () => {
         script.src = 'https://s3.tradingview.com/tv.js';
         script.async = true;
         document.head.appendChild(script);
-    }, []);
+    }, [activeSymbol]);
     return (
-        <div className="max-w-5xl mx-auto">
+        <div className=" mx-auto">
             <div className="flex flex-wrap gap-2  mb-5">
                 {coins.map((coin) => (
                     <button
                         key={coin.symbol}
                         onClick={() => setActiveSymbol(coin.symbol)}
-                        className={`px-4 py-1 font-semibold rounded-full  ${activeSymbol === coin.symbol
+                        className={`px-4 py-1 text-sm font-semibold rounded-full  ${activeSymbol === coin.symbol
                                 ? 'bg-[#eeead6] text-black '
                                 : 'bg-white border text-black'
                             }`}
