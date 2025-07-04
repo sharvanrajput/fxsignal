@@ -1,28 +1,22 @@
 
-
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
 
-// Define stock tabs
-const stocks = [
-    { label: 'TESLA', symbol: 'NASDAQ:TSLA' },
-    { label: 'APPLE', symbol: 'NASDAQ:AAPL' },
-    { label: 'COIN', symbol: 'NASDAQ:COIN' },
-    { label: 'GOOGLE', symbol: 'NASDAQ:GOOGL' },
-    { label: 'FACEBOOK', symbol: 'NASDAQ:META' },
-    { label: 'AMAZON', symbol: 'NASDAQ:AMZN' },
-    { label: 'NETFLIX', symbol: 'NASDAQ:NFLX' },
+// Indices list with TradingView symbols
+const indices = [
+    { label: 'DOW', symbol: 'BLACKBULL:US30' },
+    { label: 'S & P 100', symbol: 'SP:SP100' },
+    { label: 'DAX', symbol: 'INDEX:DAX' },
+    { label: 'FTSE', symbol: 'FOREXCOM:UKXGBP' },
+    { label: 'NIKKEI225', symbol: 'SPREADEX:NIKKEI' },
 ];
 
-
-const StockChartTabs = () => {
-
-    const [activeSymbol, setActiveSymbol] = useState(stocks[0].symbol);
+const IndicesChart = () => {
+    const [activeSymbol, setActiveSymbol] = useState(indices[0].symbol);
     const containerRef = useRef(null);
 
     useEffect(() => {
-        // Load TradingView script only once
         if (!window.TradingView) {
             const script = document.createElement('script');
             script.src = 'https://s3.tradingview.com/tv.js';
@@ -42,11 +36,11 @@ const StockChartTabs = () => {
 
     const createWidget = (symbol) => {
         if (!containerRef.current) return;
-        containerRef.current.innerHTML = ''; // Clear previous chart
+        containerRef.current.innerHTML = '';
 
         new window.TradingView.widget({
             container_id: containerRef.current.id,
-            symbol: symbol,
+            symbol,
             autosize: true,
             interval: 'D',
             timezone: 'Etc/UTC',
@@ -58,31 +52,31 @@ const StockChartTabs = () => {
             hide_top_toolbar: false,
         });
     };
-
     return (
-        <div className=" mx-auto ">
-            <div className="flex flex-wrap gap-2  mb-5">
-                {stocks.map((stock) => (
+        <div className=" mx-auto">
+            <div className="flex flex-wrap gap-2 mb-5">
+                {indices.map((item) => (
                     <button
-                        key={stock.symbol}
-                        onClick={() => setActiveSymbol(stock.symbol)}
-                        className={`px-4 py-1 text-sm font-semibold rounded-full ${activeSymbol === stock.symbol
+                        key={item.symbol}
+                        onClick={() => setActiveSymbol(item.symbol)}
+                        className={`px-4 py-1 text-sm font-semibold rounded-full ${activeSymbol === item.symbol
                             ? 'bg-[#eeead6] text-black '
                             : 'bg-white border text-black'
                             }`}
                     >
-                        {stock.label}
+                        {item.label}
                     </button>
                 ))}
             </div>
 
             <div
-                id="stock_chart_container"
+                id="index_chart"
                 ref={containerRef}
-                className="w-full h-[400px] rounded-xl overflow-hidden"
+                className="w-full h-[400px] rounded-lg overflow-hidden"
             />
         </div>
     );
 }
 
-export default StockChartTabs
+export default IndicesChart
+

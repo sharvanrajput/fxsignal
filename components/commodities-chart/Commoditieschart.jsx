@@ -62,7 +62,7 @@ const Commoditieschart = () => {
                         key={item.symbol}
                         onClick={() => setActiveSymbol(item.symbol)}
                         className={`px-4 py-1 text-sm font-semibold rounded-full ${activeSymbol === item.symbol
-                                ? 'bg-[#eeead6] text-black '
+                            ? 'bg-[#eeead6] text-black '
                             : 'bg-white border text-black'
                             }`}
                     >
@@ -74,7 +74,7 @@ const Commoditieschart = () => {
             <div
                 id="commodity_chart"
                 ref={containerRef}
-                className="w-full h-[500px] rounded-lg overflow-hidden"
+                className="w-full h-[400px] rounded-lg overflow-hidden"
             />
         </div>
     );

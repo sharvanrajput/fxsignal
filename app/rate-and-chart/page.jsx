@@ -9,6 +9,7 @@ import Currencypairschart from "@/components/currency-paires-chart/Currencypairs
 import Cryptochart from "@/components/crypto-chart/Cryptochart";
 import StockChartTabs from "@/components/stocks-chart/Stockschart";
 import Commoditieschart from "@/components/commodities-chart/Commoditieschart";
+import IndicesChart from "@/components/incides-chart/IndicesChart";
 
 
 const page = () => {
@@ -34,6 +35,9 @@ const page = () => {
 
                             <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>   <span className="text-light-yellow">Commodities </span>Chart Trends & Insights</h2>
                             <Commoditieschart />
+
+                            <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>   <span className="text-light-yellow">Indices  </span>Performance & Market Trends</h2>
+                            <IndicesChart />
 
                         </div>
                         <div className="col-span-2">

@@ -52,7 +52,7 @@ const Currencypairschart = () => {
                     </button>
                 ))}
             </div>
-            <div ref={containerRef} />
+            <div ref={containerRef} className=" w-full rounded-xl overflow-hidden" />
         </div>
     );
 }
