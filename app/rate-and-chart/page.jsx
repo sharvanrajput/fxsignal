@@ -10,6 +10,7 @@ import Cryptochart from "@/components/crypto-chart/Cryptochart";
 import StockChartTabs from "@/components/stocks-chart/Stockschart";
 import Commoditieschart from "@/components/commodities-chart/Commoditieschart";
 import IndicesChart from "@/components/incides-chart/IndicesChart";
+import Cta3 from "@/components/Cta_3/Cta3";
 
 
 const page = () => {
@@ -30,7 +31,7 @@ const page = () => {
                             <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>In-Depth   <span className="text-light-yellow">Cryptocurrency</span>Chart Analysis</h2>
                             <Cryptochart />
 
-                            <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>In-Depth   <span className="text-light-yellow">Cryptocurrency</span>Chart Analysis</h2>
+                            <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>In-Depth   <span className="text-light-yellow">Stock Market </span>Chart Analysis</h2>
                             <StockChartTabs />
 
                             <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>   <span className="text-light-yellow">Commodities </span>Chart Trends & Insights</h2>
@@ -56,6 +57,7 @@ const page = () => {
                     </div>
                 </div>
             </section>
+            <Cta3 />
 
         </main>
     )
