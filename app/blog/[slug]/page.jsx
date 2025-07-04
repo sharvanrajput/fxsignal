@@ -32,7 +32,7 @@ const Page = () => {
 
   return (
     <>
-      <section className="blog_disc pt-50 pb-20">
+      <section className="blog_disc pt-40 pb-20">
         <div className="container">
           <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
             <div className="col-span-3">

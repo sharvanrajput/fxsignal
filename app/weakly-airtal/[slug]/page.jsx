@@ -30,7 +30,7 @@ const page = () => {
 
     return (
         <>
-            <section className="pt-50 pb-20">
+            <section className="pt-40 pb-20">
                 <div className="container">
                     <div className="relative w-full h-[500px] text-start mb-5">
 

@@ -85,7 +85,7 @@ export default function Page() {
             icon: '/img/dropdown_market_5.png',
             name: 'Rates & Charts',
             description: 'Get real-time currency rates, and movements',
-            path: '/market/rates'
+            path: '/rate-and-chart'
         },
         {
             icon: '/img/dropdown_market_6.png',

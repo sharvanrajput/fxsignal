@@ -19,7 +19,7 @@ const Blogslider = () => {
 console.log(recentFourBlogs)
 
   return (
-    <section className='pt-50 pb-20'>
+    <section className='pt-40 pb-20'>
       <div className="container px-5 py-10">
         <h5 className='text-light-yellow font-bold'>FXSignals Blog</h5>
         <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Stay Ahead with Expert Market Insights</h2>

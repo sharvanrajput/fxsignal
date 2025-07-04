@@ -8,7 +8,7 @@ import Image from 'next/image'
 const page = () => {
     return (
         <main  >
-            <section className='pt-50 pb-20 relative'>
+            <section className='pt-40 pb-20 relative'>
                 <Image src="/img/marketoverview_shape.png" height={400} width={300} className='absolute h-[400px] w-[300px] right-0 top-[200px] z-0' alt="" />
                 <div className="container z-10">
                     <h5 className='text-light-yellow font-bold'>Market Overview</h5>

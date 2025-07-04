@@ -9,7 +9,7 @@ const page = () => {
     return (
         <div>
             <main>
-                <section className="learnforex pt-50 pb-10">
+                <section className="learnforex pt-40 pb-10">
                     <div className="container">
                         <div className="grid lg:grid-cols-5 grid-cols-1 gap-10">
                             <div className='col-span-3'>
