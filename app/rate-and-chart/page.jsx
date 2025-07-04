@@ -6,6 +6,7 @@ import Topbrocker from '@/components/topbrockertable/page.jsx';
 import Downloadapp from '@/components/downloadapp/page.jsx';
 import Image from 'next/image'
 import Currencypairschart from "@/components/currency-paires-chart/Currencypairschart";
+import Cryptochart from "@/components/crypto-chart/Cryptochart";
 
 
 const page = () => {
@@ -22,6 +23,9 @@ const page = () => {
 
                             <h2 className='text-3xl pb-5 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>Live streaming <span className="text-light-yellow">forex rates</span> for major currency pairs</h2>
                             <Currencypairschart />
+
+                            <h2 className='text-3xl pb-5 mt-10 font-semibold   bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent'>In-Depth   <span className="text-light-yellow">Cryptocurrency</span>Chart Analysis</h2>
+                            <Cryptochart />
 
                         </div>
                         <div className="col-span-2">
