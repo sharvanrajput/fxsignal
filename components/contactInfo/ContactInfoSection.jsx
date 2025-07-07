@@ -13,11 +13,11 @@ import {
 
 const ContactInfoSection = () => {
     return (
-        <section className="py-10">
+        <section className="pb-20">
             <div className="container">
 
-                <div className=" mx-auto px-4 py-4 bg-white border border-gray-400 rounded-xl overflow-hidden shadow-sm">
-                    <div className="grid md:grid-cols-2 gap-6 p-6">
+                <div className="  px-4 py-4 bg-white border  border-gray-400 rounded-xl overflow-hidden shadow-sm">
+                    <div className="grid md:grid-cols-2 gap-10 p-6">
                         {/* Left: Map */}
                         <div className="rounded-lg overflow-hidden shadow">
                             <iframe
@@ -37,8 +37,8 @@ const ContactInfoSection = () => {
                                 <div className="flex items-start gap-3">
                                     <MdLocationOn className="text-2xl text-heading-c1  border border-gray-400 h-10 w-10 p-2 rounded-full  mt-1" />
                                     <div>
-                                        <p className="font-semibold">Address</p>
-                                        <p>
+                                        <h4 className="font-semibold text-xl">Address</h4>
+                                        <p className='text-md'>
                                             Plot 125, Al Sayegh building, 457R+45M – Al Barsha – Al Barsha 1, Dubai
                                         </p>
                                     </div>
@@ -47,16 +47,16 @@ const ContactInfoSection = () => {
                                 <div className="flex items-start gap-3">
                                     <MdCall className="text-2xl text-heading-c1  border border-gray-400 h-10 w-10 p-2 rounded-full  mt-1" />
                                     <div>
-                                        <p className="font-semibold">Contact Number</p>
-                                        <p>+91 971559803682</p>
+                                        <h4 className="font-semibold text-xl">Contact Number</h4>
+                                        <p className='text-md'>+91 971559803682</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start gap-3">
                                     <MdEmail className="text-2xl text-heading-c1  border border-gray-400 h-10 w-10 p-2 rounded-full  mt-1" />
                                     <div>
-                                        <p className="font-semibold">Support Emails</p>
-                                        <p>support@fxsignals.ae | info@fxsignals.ae</p>
+                                        <h4 className="font-semibold text-xl">Support Emails</h4>
+                                        <p className='text-md'>support@fxsignals.ae | info@fxsignals.ae</p>
                                     </div>
                                 </div>
                             </div>

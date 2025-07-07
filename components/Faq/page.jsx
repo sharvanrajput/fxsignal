@@ -14,12 +14,20 @@ const FaqAccordion = ({ heading, subhead, faqs }) => {
 
   return (
     <>
-      <section className='pt-20'>
+      <section className={`${heading ? "pt-20": "pt-0"}`}>
         <div className="container pb-20">
-          <h2 className="text-4xl mb-3 font-bold ">{heading}</h2>
-          <p className="text-para-dark mb-4">
-            {subhead}
-          </p>
+
+          {heading ? (
+            <div>
+
+
+              <h2 className="text-4xl mb-3 font-bold ">{heading}</h2>
+              <p className="text-para-dark mb-4">
+                {subhead}
+              </p>
+            </div>
+          ) : null
+          }
 
           <div className=" mx-auto   space-y-4">
             {faqs.map((faq, index) => (

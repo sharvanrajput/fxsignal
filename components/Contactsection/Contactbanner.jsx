@@ -21,7 +21,7 @@ const Contactbanner = () => {
     };
 
     return (
-        <section className="pt-40 pb-20">
+        <section className="pt-40 pb-20" id="contactform">
             <div className="container">
                 <div className="  grid lg:grid-cols-2 lg:gap-10 gap-5 items-center justify-center">
 

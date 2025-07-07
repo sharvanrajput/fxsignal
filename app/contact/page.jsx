@@ -1,3 +1,4 @@
+import ContactFaq from '@/components/contactfaq/ContactFaq'
 import ContactInfoSection from '@/components/contactInfo/ContactInfoSection'
 import Contactbanner from '@/components/Contactsection/Contactbanner'
 import React from 'react'
@@ -7,6 +8,7 @@ const page = () => {
     <main>
         <Contactbanner />
         <ContactInfoSection />
+        <ContactFaq />
       
     </main>
   )
