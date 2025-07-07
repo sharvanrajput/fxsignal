@@ -67,7 +67,7 @@ export default function Page() {
             icon: '/img/dropdown_market_2.png',
             name: 'Forex Trading',
             description: 'Trade major, minor, and exotic currency pairs',
-            path: '/market/forex'
+            path: '/forex'
         },
         {
             icon: '/img/dropdown_market_3.png',
@@ -91,7 +91,7 @@ export default function Page() {
             icon: '/img/dropdown_market_6.png',
             name: 'Cryptocurrency',
             description: 'Get signals for Bitcoin, Ethereum, and more',
-            path: '/market/crypto'
+            path: '/crypto'
         },
         {
             icon: '/img/dropdown_market_7.png',
