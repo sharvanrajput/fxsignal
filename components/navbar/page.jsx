@@ -97,7 +97,7 @@ export default function Page() {
             icon: '/img/dropdown_market_7.png',
             name: 'Commodities',
             description: 'Access signals for gold, oil, and other commodities',
-            path: '/market/commodities'
+            path: '/commodities'
         }
     ];
 
