@@ -79,7 +79,7 @@ export default function Page() {
             icon: '/img/dropdown_market_4.png',
             name: 'Indices',
             description: 'Track and trade global market indices effectively',
-            path: '/market/indices'
+            path: '/indices'
         },
         {
             icon: '/img/dropdown_market_5.png',
