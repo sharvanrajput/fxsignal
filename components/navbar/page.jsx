@@ -73,7 +73,7 @@ export default function Page() {
             icon: '/img/dropdown_market_3.png',
             name: 'Stocks',
             description: 'Trade top global stocks with expert analysis',
-            path: '/market/stocks'
+            path: '/stocks'
         },
         {
             icon: '/img/dropdown_market_4.png',
