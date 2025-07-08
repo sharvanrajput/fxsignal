@@ -21,7 +21,7 @@ const Page = () => {
 
     return (
         <section
-            className="about_banner pt-[150px] pb-[50px] bg-contain bg-center"
+            className="about_banner pt-40 pb-20 bg-contain bg-center"
             style={{ backgroundImage: `url(${bg_shape_1.src})` }}
         >
             <div className="container">

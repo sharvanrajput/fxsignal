@@ -8,7 +8,7 @@ import pricing_hero_right from "@/public/img/pricing_hero_right.png";
 const Pricingabout = () => {
     return (
         <><section
-            className="about_banner pt-[150px] pb-[50px] bg-contain bg-center"
+            className="about_banner pt-40 pb-20 bg-contain bg-center"
             style={{ backgroundImage: `url(${bg_shape_1.src})` }}
         >
             <div className="container">

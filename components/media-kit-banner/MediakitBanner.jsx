@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import { FaUsers, FaGlobe, FaChartLine, FaBriefcase } from "react-icons/fa";
+import mediakit_banner from "@/public/img/mediakit_banner.png"
 const MediakitBanner = () => {
       const { ref, inView } = useInView({ threshold: 0.4 });
     const [hasAnimated, setHasAnimated] = useState(false);
@@ -19,7 +20,7 @@ const MediakitBanner = () => {
     }, [inView, hasAnimated]);
     return (
         <section
-            className="about_banner pt-[150px] pb-[50px] bg-contain bg-center"
+            className="about_banner pt-40 pb-20 bg-contain bg-center"
             style={{ backgroundImage: `url(${bg_shape_1.src})` }}
         >
             <div className="container">
@@ -37,7 +38,7 @@ const MediakitBanner = () => {
                     </div>
                     <div>
                         <Image
-                            src={partner_page_hero_img}
+                            src={mediakit_banner}
                             alt="About Banner"
                             className="w-[75%] mx-auto "
                             priority
