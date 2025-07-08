@@ -166,7 +166,7 @@ export default function Page() {
             icon: '/img/dropdown_contact_2.png',
             name: 'Partnership Enquiries',
             description: 'Explore collaboration and IB opportunities',
-            path: '/contact'
+            path: '/partner'
         }
     ];
 
