@@ -10,8 +10,12 @@ import Image from 'next/image';
 import Button from '../navbutton/page';
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from 'react-icons/fa';
+import AuthModal from '@/components/auth/AuthModal';
 
 export default function Page() {
+    const [showModal, setShowModal] = useState(false);
+    const [authView, setAuthView] = useState("login");
+
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
     const pathname = usePathname();
@@ -381,8 +385,30 @@ export default function Page() {
 
                 {/* Auth Buttons */}
                 <div className="hidden xl:flex gap-4">
-                    <Button href="/Login" variant="outline" withicon={true}>Login</Button>
-                    <Button href="/Get Started" variant="primary" withicon={true}>Get Started</Button>
+                    <button onClick={() => {
+                        setAuthView("login");
+                        setShowModal(true);
+                    }}>
+                        <Button href="" variant="outline" withicon={true} >
+
+
+                            Login
+
+                        </Button>
+                    </button>
+                    <button onClick={() => {
+                        setAuthView("register");
+                        setShowModal(true);
+                    }}>
+                        <Button href="" variant="primary" withicon={true} >
+
+
+                            Get Started
+
+
+
+                        </Button>
+                    </button>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -443,27 +469,49 @@ export default function Page() {
                     </ul>
                 </div>
                 <div className="mt-5 grid grid-cols-1 relative sm:grid-cols-2 gap-3">
-                    <Button
-                        href="/Login"
-                        variant="outline"
-                        className="!w-[100%] "
-                        withicon={false}
-                    >
-                        Login
-                    </Button>
+                    <button onClick={() => {
+                        setAuthView("login");
+                        setShowModal(true);
+                    }}>
+                        <Button
+                            href=""
+                            variant="outline"
+                            className="!w-[100%] "
+                            withicon={false}
 
-                    <Button
-                        href="/Get Started"
-                        variant="primary"
-                        className="!w-[100%] "
-                        withicon={false}
-                    >
-                        Get Started
-                    </Button>
+                        >
+
+
+                            Login
+
+                        </Button>
+                    </button>
+                    <button onClick={() => {
+                        setAuthView("register");
+                        setShowModal(true);
+                    }}>
+                        <Button
+                            href=""
+                            variant="primary"
+                            className="!w-[100%] "
+                            withicon={false}
+
+                        >
+
+
+                            Get Started
+
+                        </Button>
+                    </button>
                 </div>
 
             </div>
         </div>
+        <AuthModal
+            isOpen={showModal}
+            onClose={() => setShowModal(false)}
+            defaultView={authView}
+        />
     </>
 
 }
