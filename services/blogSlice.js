@@ -1,4 +1,5 @@
 const { createApi, fetchBaseQuery } = require("@reduxjs/toolkit/query/react");
+export const apiUrl = process.env.NEXT_PUBLIC_BASEURL;
 
 export const Blogslice = createApi({
     reducerPath:"blogs",
@@ -11,5 +12,3 @@ export const Blogslice = createApi({
 })
 
 export const { useGetBlogsQuery } = Blogslice;
-
-export const apiUrl = process.env.NEXT_PUBLIC_BASEURL;

@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import logo from '@/public/img/fxsignal-dark-logo.png';
@@ -11,6 +11,9 @@ import Button from '../navbutton/page';
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from 'react-icons/fa';
 import AuthModal from '@/components/auth/AuthModal';
+import { useSelector, useDispatch } from 'react-redux';
+import { logoutUser as logoutRTK } from '@/services/globaluserauthData'; // your global slice
+import { useLogoutUserMutation } from '@/services/authSlice';
 
 export default function Page() {
     const [showModal, setShowModal] = useState(false);
@@ -205,6 +208,60 @@ export default function Page() {
         }
     ];
 
+
+    const dispatch = useDispatch();
+    const globalUser = useSelector((state) => state.globalauth.user);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const dropdownRef = useRef(null);
+
+
+    const [user, setUser] = useState(() => {
+        if (typeof window !== 'undefined') {
+            try {
+                const stored = localStorage.getItem('user');
+                return stored ? JSON.parse(stored) : null;
+            } catch (err) {
+                console.error('Invalid user in localStorage', err);
+                return null;
+            }
+        }
+        return null;
+    });
+
+    useEffect(() => {
+        if (globalUser) {
+            setUser(globalUser);
+        }
+    }, [globalUser]);
+    const [logoutUserAPI] = useLogoutUserMutation();
+
+    const handleLogout = async () => {
+        try {
+            await logoutUserAPI().unwrap(); // API call
+        } catch (err) {
+            console.warn('Logout API failed (possibly not logged in)');
+        }
+
+        localStorage.removeItem('user');        // Clear localStorage
+        dispatch(logoutRTK());                  // Reset Redux
+        setUser(null);                          // Reset local state
+        setShowDropdown(false);                // Close dropdown
+        console.log('Logout successful');
+    };
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShowDropdown(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+
     return <>
         <nav className={` ${pathname == "/" ? "  bg-transparent backdrop-blur-lg" : "bg-black"}  shadow-md px-4 md: py-0 z-20 absolute w-full`}>
             {pathname == "/" && <span className=" absolute  inline-block w-full -z-10">
@@ -379,37 +436,56 @@ export default function Page() {
                         </ul>
                     </li>
                 </ul>
+                <div ref={dropdownRef} className="relative">
+                    {user ? (
+                        <>
+                            <button
+                                onClick={() => setShowDropdown(!showDropdown)}
+                                className="bg-light-yellow px-4 py-3 rounded-md text-black"
+                            >
+                                Welcome {user.fullname?.split(' ')[0] ?? 'User'}
+                            </button>
+                            {showDropdown && (
+                                <div className="absolute right-0 mt-2 w-40 bg-white border shadow rounded z-50">
+                                    <button
+                                        onClick={handleLogout}
+                                        className="w-full px-4 py-2 text-left text-red-600 hover:bg-gray-100"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    ) : (
+                        <div className="hidden xl:flex gap-4">
+                            <div className="hidden xl:flex gap-4">
+                                <button
+                                    onClick={() => {
+                                        setAuthView('login');
+                                        setShowModal(true);
+                                    }}
+                                >
+                                    <Button href={""} variant="outline" withicon>
+                                        Login
+                                    </Button>
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        setAuthView('register');
+                                        setShowModal(true);
+                                    }}
+                                >
+                                    <Button href={""} variant="primary" withicon>
+                                        Get Started
+                                    </Button>
+                                </button>
+                            </div>
+                        </div>
+                    )}
 
-
-
-
-                {/* Auth Buttons */}
-                <div className="hidden xl:flex gap-4">
-                    <button onClick={() => {
-                        setAuthView("login");
-                        setShowModal(true);
-                    }}>
-                        <Button href="" variant="outline" withicon={true} >
-
-
-                            Login
-
-                        </Button>
-                    </button>
-                    <button onClick={() => {
-                        setAuthView("register");
-                        setShowModal(true);
-                    }}>
-                        <Button href="" variant="primary" withicon={true} >
-
-
-                            Get Started
-
-
-
-                        </Button>
-                    </button>
                 </div>
+                {/* Auth Buttons */}
+
 
                 {/* Mobile Toggle */}
                 <button onClick={toggleMenu} className="xl:hidden text-white" aria-label="Toggle menu">
@@ -515,3 +591,4 @@ export default function Page() {
     </>
 
 }
+
