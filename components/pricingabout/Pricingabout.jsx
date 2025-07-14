@@ -1,10 +1,10 @@
 
 import Image from 'next/image';
-
 import Toprightarrowbutton from '@/components/button_icon/page.jsx';
 import { IoCallOutline } from "react-icons/io5";
 import bg_shape_1 from "@/public/img/bg_shape_1.png";
 import pricing_hero_right from "@/public/img/pricing_hero_right.png";
+import Link from 'next/link';
 const Pricingabout = () => {
     return (
         <><section
@@ -21,7 +21,9 @@ const Pricingabout = () => {
                         <p className="text-para-dark text-lg py-3 mb-4">
                             Expand your reach, attract more traders, and maximize your revenue with our exclusive partner and brokerage solutions.
                         </p>
-                        <Toprightarrowbutton btntext={"Register as Partner"} />
+                        <Link href={"/livesignal"}>
+                            <Toprightarrowbutton btntext={"Get Free Signals"} />
+                        </Link>
                         <p className='text-para-dark flex items-center mt-4 '>
                             <IoCallOutline className='me-2' /> For equerries call: +971 503056430
                         </p>

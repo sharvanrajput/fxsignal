@@ -2,6 +2,7 @@ import Image from 'next/image';
 import forgotSvg from '@/public/img/Forgot-Password.png';
 
 const ForgotPasswordForm = ({ goBack, onNext }) => {
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;

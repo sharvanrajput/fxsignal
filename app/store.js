@@ -8,6 +8,7 @@ import { tradeideasSlice } from '@/services/tradeIdeasSlice';
 import { weeklyArtical } from '@/services/weeklyArticalSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import globalauthReducer from '@/services/globaluserauthData';
+import { contactSlice } from '@/services/contactSlice';
 
 
 
@@ -20,9 +21,10 @@ const store = configureStore({
     [weeklyArtical.reducerPath]: weeklyArtical.reducer,
     [tradeideasSlice.reducerPath]: tradeideasSlice.reducer,
     [autoSlice.reducerPath]: autoSlice.reducer,
+    [contactSlice.reducerPath]: contactSlice.reducer,
     globalauth: globalauthReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware).concat(Blogslice.middleware).concat(weeklyArtical.middleware).concat(tradeideasSlice.middleware).concat(autoSlice.middleware),
+    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware).concat(Blogslice.middleware).concat(weeklyArtical.middleware).concat(tradeideasSlice.middleware).concat(autoSlice.middleware).concat(contactSlice.middleware),
 });
 export default store;

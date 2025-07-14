@@ -3,11 +3,18 @@
 // components/ContactSection.jsx
 'use client';
 import contactbanner from "@/public/img/contact-banner.png";
+import { useSendContactInfoMutation } from "@/services/contactSlice";
 
 import Image from 'next/image';
 import { useState } from 'react';
 
 const Contactbanner = () => {
+
+    const [sendcontdata , {isLoading}] = useSendContactInfoMutation()
+
+ 
+    
+
     const [form, setForm] = useState({ name: '', email: '', message: '' });
 
     const handleChange = (e) => {
@@ -16,9 +23,17 @@ const Contactbanner = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const {message,error} =  sendcontdata(form)
+        console.log(message || error)
+        
         alert(`Message Sent!\nName: ${form.name}\nEmail: ${form.email}`);
+
+
         setForm({ name: '', email: '', message: '' });
     };
+
+    if (isLoading) (<div className="loader"> </div>) 
+
 
     return (
         <section className="pt-40 pb-20" id="contactform">

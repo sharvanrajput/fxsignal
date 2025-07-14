@@ -14,7 +14,7 @@ const page = () => {
 
             <section className="pt-40 pb-0 bg-[url('/img/tools_pages_banner_shape.png')] bg-cover bg-center bg-no-repeat">
                 <div className="container">
-                    <h5 className='text-light-yellow font-bold'>ECONOMIC CALANDERS</h5>
+                    <h5 className='text-light-yellow font-bold'>MARKET DATA</h5>
                     <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Stay Ahead with Real-Time Market Data</h2>
                     <p className="text-para-dark mb-6 mt-5 text-lg">Get live updates on Forex, Stocks, Commodities, and Indices to make informed trading decisions.</p>
 
