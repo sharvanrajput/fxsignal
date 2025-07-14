@@ -74,7 +74,7 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
         rememberMe: false,
       })
 
-      alert("Login successful");
+      
     } catch (err) {
       console.error("Login error:", err);
       setServerError("Something went wrong. Please try again.");
@@ -111,7 +111,7 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
 
           {serverError && <p className="text-sm text-red-600 text-center">{serverError}</p>}
 
-          <button type="submit" className="w-full bg-yellow-400 p-3 rounded-md font-semibold hover:bg-yellow-500">Login</button>
+          <button type="submit" cla        ssName="w-full bg-yellow-400 p-3 rounded-md font-semibold hover:bg-yellow-500">Login</button>
         </form>
 
         <p className="text-sm text-center mt-4">
