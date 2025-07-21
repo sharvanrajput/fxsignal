@@ -9,12 +9,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 const page = () => {
-    const { data, isLoading, isError } = useGetBlogsQuery();
+    const { data, isLoading } = useGetBlogsQuery();
 
-    if (isLoading) return <div className="loading"></div>
-    if (isError) return <div className=""> Something Went wrong</div>
+   
 
-    const blog3 = data.blog.slice(0, 3)
+    if (isLoading) return <div className="loader"></div>
+    
+
+    const blog3 = data.blog.slice(0, 3) || []
     return (
         <>
             <section className="text-gray-600 body-font">
@@ -34,7 +36,7 @@ const page = () => {
                                         className="object-cover"
                                     />
                                     <span className="absolute top-2 left-2 bg-yellow-400 text-xs font-semibold text-black px-2 py-1 rounded">
-                                        {blog.blog_category}
+                                        {blog.category_name}
                                     </span>
                                     <Image
                                         src="/img/fxsignal-dark-logo.png"
@@ -51,7 +53,7 @@ const page = () => {
                                             <MdOutlineDateRange className='me-2 text-xl text-light-yellow' />
                                             <span className="text-para-dark">{blog.blog_date.split("T")[0]}</span>
                                         </div>
-                                        <div>by - {blog.created_by}</div>
+                                        <div>by - {blog.created_by_name}</div>
                                     </div>
 
                                     <h2 className="text-lg font-bold text-gray-800 line-clamp-2 mb-2">

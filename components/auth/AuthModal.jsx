@@ -38,9 +38,9 @@ const AuthModal = ({ isOpen, onClose, defaultView = "login" }) => {
                     <IoClose />
                 </button>
 
-                {view === "login" && <LoginForm goToRegister={goToRegister} goToForgot={goToForgot} />}
-                {view === "register" && <RegisterForm goToLogin={goToLogin} />}
-                {view === "forgot" && <ForgotPasswordForm goBack={goToLogin} onNext={goToOtp} />}
+                {view === "login" && <LoginForm goToRegister={goToRegister} closemodal={onClose} goToForgot={goToForgot} />}
+                {view === "register" && <RegisterForm goToLogin={goToLogin}  />}
+                {view === "forgot" && <ForgotPasswordForm goBack={goToLogin} onNext={goToOtp}  />}
                 {view === "otp" && <OtpForm email={email} goBack={goToForgot} onVerify={goToReset} />}
                 {view === "reset" && <ResetPasswordForm goToLogin={goToLogin} />}
             </div>

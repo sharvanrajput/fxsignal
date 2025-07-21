@@ -63,28 +63,37 @@ const Page = () => {
     setToCurrency(fromCurrency);
   };
 
+  const handleQuickSelect = (currency, type) => {
+    if (type === 'from') {
+      setFromCurrency(currency);
+    } else {
+      setToCurrency(currency);
+    }
+  };
+
   return (
-    <div className="bg-white rounded-xl shadow p-6 mx-auto">
+    <div className="bg-white rounded-xl shadow p-4 sm:p-6 mx-auto max-w-4xl">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-gray-800">Currency Converter</h2>
         <Image src={convertoricon} width={28} height={28} alt="converter icon" />
       </div>
 
-      <div className="grid grid-cols-20 gap-4  mb-7">
+      {/* Currency Selection Dropdowns */}
+      <div className="grid grid-cols-1 md:grid-cols-20 gap-4 mb-7">
         <select
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
-          className="border rounded-md col-span-9 px-4 py-4 w-full"
+          className="border rounded-md md:col-span-9 px-4 py-4 w-full"
         >
           {currencies.map((cur) => (
             <option key={cur} value={cur}>{cur}</option>
           ))}
         </select>
-        <div className="div col-span-2"></div>
+        <div className="hidden md:block md:col-span-2"></div>
         <select
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
-          className="border rounded-md col-span-9 px-4 py-4 w-full"
+          className="border rounded-md md:col-span-9 px-4 py-4 w-full"
         >
           {currencies.map((cur) => (
             <option key={cur} value={cur}>{cur}</option>
@@ -92,17 +101,18 @@ const Page = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-20 items-center gap-4 mb-7">
+      {/* Amount Input and Conversion Result */}
+      <div className="grid grid-cols-1 md:grid-cols-20 items-center gap-4 mb-7">
         <input
           type="number"
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
-          className=" col-span-9 px-4 py-4 bg-yellow-50 rounded-md border text-center"
+          className="md:col-span-9 px-4 py-4 bg-yellow-50 rounded-md border text-center"
         />
 
         <button
           onClick={handleSwitch}
-          className="col-span-2 flex justify-center text-yellow-500 text-xl"
+          className="md:col-span-2 flex justify-center text-yellow-500 text-xl py-4"
         >
           <FaExchangeAlt />
         </button>
@@ -111,23 +121,53 @@ const Page = () => {
           type="text"
           value={converted}
           readOnly
-          className=" col-span-9 px-4 py-4 bg-yellow-50 rounded-md border text-center"
+          className="md:col-span-9 px-4 py-4 bg-yellow-50 rounded-md border text-center"
         />
       </div>
-      <div className="grid grid-cols-20 mb-7">
 
-
-        <div className="grid grid-cols-10  col-span-9 gap-2 text-center text-xs text-gray-500 mb-4">
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${fromCurrency === 'EUR' ? 'bg-gray-200' : ''}`}>EUR</span>
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${fromCurrency === 'GBP' ? 'bg-gray-200' : ''}`}>GBP</span>
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${fromCurrency === 'BTC' ? 'bg-gray-200' : ''}`}>BTC</span>
+      {/* Quick Currency Selection */}
+      <div className="grid grid-cols-1 md:grid-cols-20 gap-4 mb-7">
+        {/* From Currency Quick Select */}
+        <div className="md:col-span-9">
+          <div className="text-xs text-gray-600 mb-2">From Currency:</div>
+          <div className="flex flex-wrap gap-2">
+            {['EUR', 'GBP', 'INR'].map((currency) => (
+              <span
+                key={currency}
+                onClick={() => handleQuickSelect(currency, 'from')}
+                className={`py-1 px-3 rounded-full cursor-pointer text-xs transition-colors ${
+                  fromCurrency === currency 
+                    ? 'bg-yellow-200 text-yellow-800' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {currency}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className='col-span-2'> </div>
 
-        <div className="grid grid-cols-10 col-span-9  gap-2 text-center text-xs text-gray-500 mb-4">
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${toCurrency === 'USD' ? 'bg-gray-200' : ''}`}>USD</span>
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${toCurrency === 'GBP' ? 'bg-gray-200' : ''}`}>GBP</span>
-          <span className={`py-1 px-3 col-span-2 rounded-full  cursor-pointer ${toCurrency === 'ETH' ? 'bg-gray-200' : ''}`}>ETH</span>
+        {/* Spacer */}
+        <div className="hidden md:block md:col-span-2"></div>
+
+        {/* To Currency Quick Select */}
+        <div className="md:col-span-9">
+          <div className="text-xs text-gray-600 mb-2">To Currency:</div>
+          <div className="flex flex-wrap gap-2">
+            {['USD', 'GBP', 'CNY'].map((currency) => (
+              <span
+                key={currency}
+                onClick={() => handleQuickSelect(currency, 'to')}
+                className={`py-1 px-3 rounded-full cursor-pointer text-xs transition-colors ${
+                  toCurrency === currency 
+                    ? 'bg-yellow-200 text-yellow-800' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {currency}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 

@@ -15,17 +15,17 @@ const page = () => {
                         <Image src={download_icon} width={40} height={40} alt="downlaod iocn" />
                     </div>
                 </div>
-                <div className="flex  flex-wrap  justify-between  gap-3">
+                <div className=" grid-cols-2 grid  gap-3">
                     <Image
                         src={playstore}
 
-                        className="h-auto w-full max-w-[220px]"
+                        className="h-auto w-full "
                         alt="playstore"
                     />
                     <Image
                         src={appstore}
 
-                        className="h-auto w-full max-w-[220px]"
+                        className="h-auto w-full "
                         alt="appstore"
                     />
                 </div>

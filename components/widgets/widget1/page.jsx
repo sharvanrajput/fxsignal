@@ -84,7 +84,7 @@ const page = () => {
 
 
     return (
-        <div className="tradingview-widget-container bg-[#1f1f1f] px-3 py-2 rounded-xl overflow-hidden">
+        <div className="tradingview-widget-container bg-[#1f1f1f] px-3 mb-4 py-2 rounded-xl overflow-hidden">
             <div ref={containerRef} className="tradingview-widget-container__widget" />
 
         </div>

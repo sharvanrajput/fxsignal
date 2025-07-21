@@ -12,7 +12,7 @@ const page = () => {
         <main>
             <section className="py-50">
                 <div className="container">
-                    <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
+                    <div className="grid lg:grid-cols-5 grid-cols-1 gap-5">
                         <div className="col-span-3">
                             <h2 className="text-4xl  text-heading-c1   font-bold inline-block relative z-10">Top Brokers We Work With</h2>
                             <p className="text-para-dark mb-6 mt-5 text-lg">Partnering with the Best to Enhance Your Trading Experience</p>
@@ -27,7 +27,7 @@ const page = () => {
                         </div>
                         <div className="col-span-2">
                             {/* offer slider  */}
-                            <Widgets1 />
+                            <Widgets1  />
                             <Offerslider />
                             <CurencyConvertor />
 

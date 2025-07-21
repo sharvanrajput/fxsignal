@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import loginSvg from "@/public/img/login.png";
-import { useLoginUserMutation } from "@/services/authSlice";
+import { useLoginUserMutation, useSessiondataQuery } from "@/services/authSlice";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "@/services/globaluserauthData";
 
-
-const LoginForm = ({ goToRegister, goToForgot }) => {
+const LoginForm = ({ goToRegister, goToForgot, closemodal }) => {
   const [loginUser] = useLoginUserMutation();
-  const dispatch = useDispatch(); // ✅ get dispatch
+
+  const [shouldFetchSession, setShouldFetchSession] = useState(false); // ✅ control session fetch
+  const { data: sessionData } = useSessiondataQuery(undefined, { skip: !shouldFetchSession });
+
+  const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -20,6 +23,12 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
 
   const [errors, setErrors] = useState({});
   const [serverError, setServerError] = useState("");
+
+  useEffect(() => {
+    if (sessionData?.user) {
+      console.log("✅ Session data:", sessionData.user);
+    }
+  }, [sessionData]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -35,13 +44,15 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
     const newErrors = {};
     if (!formData.email.trim()) newErrors.email = "Email is required";
     else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Invalid email format";
-    if (!formData.password || formData.password.length < 5) newErrors.password = "Password must be at least 5 characters";
+    if (!formData.password || formData.password.length < 5)
+      newErrors.password = "Password must be at least 5 characters";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleLogin = async (e) => {
+
     e.preventDefault();
     if (!validateForm()) return;
 
@@ -59,27 +70,21 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
         return;
       }
 
-      // ✅ Set in localStorage
-      localStorage.setItem("user", JSON.stringify(data.user));
-      // ✅ Get data from localStorage
-      // const localUser = JSON.parse(localStorage.getItem("user"));
-
-      // // ✅ Dispatch to Redux from localStorage
-      // dispatch(setCredentials(localUser));
-      // ✅ Dispatch to Redux
       dispatch(setCredentials(data.user));
-      setFormData({
-        email: "",
-        password: "",
-        rememberMe: false,
-      })
+      setFormData({ email: "", password: "", rememberMe: false });
+      // ✅ Trigger session query after login
+      setShouldFetchSession(true);
+      closemodal();
 
-      
     } catch (err) {
       console.error("Login error:", err);
       setServerError("Something went wrong. Please try again.");
     }
   };
+
+  
+      
+      
 
   return (
     <div className="flex flex-col lg:flex-row w-full">
@@ -92,12 +97,26 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="example@gmail.com" className="w-full p-3 border rounded-md" />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="example@gmail.com"
+              className="w-full p-3 border rounded-md"
+            />
             {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
           </div>
 
           <div>
-            <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="********" className="w-full p-3 border rounded-md" />
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="********"
+              className="w-full p-3 border rounded-md"
+            />
             {errors.password && <p className="text-sm text-red-500 mt-1">{errors.password}</p>}
           </div>
 
@@ -106,17 +125,23 @@ const LoginForm = ({ goToRegister, goToForgot }) => {
               <input type="checkbox" name="rememberMe" checked={formData.rememberMe} onChange={handleChange} />
               Remember me
             </label>
-            <button type="button" onClick={goToForgot} className="text-yellow-700 hover:underline">Forgot Password?</button>
+            <button type="button" onClick={goToForgot} className="text-yellow-700 hover:underline">
+              Forgot Password?
+            </button>
           </div>
 
           {serverError && <p className="text-sm text-red-600 text-center">{serverError}</p>}
 
-          <button type="submit" className="w-full bg-yellow-400 p-3 rounded-md font-semibold hover:bg-yellow-500">Login</button>
+          <button type="submit"  className="w-full bg-yellow-400 p-3 rounded-md font-semibold hover:bg-yellow-500">
+            Login
+          </button>
         </form>
 
         <p className="text-sm text-center mt-4">
           Don't have an account?{" "}
-          <span onClick={goToRegister} className="text-yellow-700 cursor-pointer font-semibold">Create free account</span>
+          <span onClick={goToRegister} className="text-yellow-700 cursor-pointer font-semibold">
+            Create free account
+          </span>
         </p>
       </div>
     </div>

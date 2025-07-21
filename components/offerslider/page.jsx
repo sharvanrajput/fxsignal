@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto ">
+    <div className="w-full  mx-auto ">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
@@ -27,7 +27,7 @@ const page = () => {
       >
         {[slide1, slide2, slide3].map((ele, i) => (
           <SwiperSlide key={i}>
-            <div className=" rounded-xl pb-10 text-center text-xl font-semibold shadow-lg">
+            <div className=" rounded-xl pb-10 text-center text-xl font-semibold ">
               <Image src={ele} width={100 + "%"} height={"auto"} alt="slider" />
             </div>
           </SwiperSlide>

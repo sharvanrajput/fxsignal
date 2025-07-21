@@ -28,16 +28,13 @@ const page = () => {
         <>
             <section className="py-[80px]  ">
                 <div className="container">
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-2" >
-                        <div className="col-span-3">
-                            <h2 className="relative bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent pb-3 inline-block text-4xl font-bold 
+                    <h2 className="relative bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent pb-3 inline-block text-4xl font-bold 
                             before:content-[''] before:absolute before:w-[200px] before:h-[30px]
                             before:bg-gradient-to-r before:from-yellow-100 before:to-white  before:-z-10 before:left-0 before:top-1/2 before:-translate-y-1/4" >Live Forex Signals</h2>
-                            <p className="text-para-dark my-5 text-lg">Latest forex trade recommendations updated in real-time!</p>
+                    <p className="text-para-dark my-5 text-lg">Latest forex trade recommendations updated in real-time!</p>
 
-                        </div>
-                        <div className="col-span-2"></div>
-                        <div className="col-span-3">
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-2" >
+                        <div className="lg:col-span-3 col-span-1">
                             <div className="overflow-x-auto md:overflow-x-visible">
 
 
@@ -95,7 +92,7 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-span-2">
+                        <div className="lg:col-span-2 col-span-1">
                             <div className=" bg-[#1f1f1f] ">
                                 <Widgets1 />
                             </div>

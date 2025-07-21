@@ -1,6 +1,5 @@
 // src/app/store.js
-
-import { autoSlice } from '@/services/authSlice';
+import { authSlice } from '@/services/authSlice'
 import { Blogslice } from '@/services/blogSlice';
 import { newsreportSlice } from '@/services/newsreportSlice';
 import { topBrokerApi } from '@/services/topBorckerSlice';
@@ -20,11 +19,11 @@ const store = configureStore({
     [Blogslice.reducerPath]: Blogslice.reducer,
     [weeklyArtical.reducerPath]: weeklyArtical.reducer,
     [tradeideasSlice.reducerPath]: tradeideasSlice.reducer,
-    [autoSlice.reducerPath]: autoSlice.reducer,
+    [authSlice.reducerPath]: authSlice.reducer,
     [contactSlice.reducerPath]: contactSlice.reducer,
     globalauth: globalauthReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware).concat(Blogslice.middleware).concat(weeklyArtical.middleware).concat(tradeideasSlice.middleware).concat(autoSlice.middleware).concat(contactSlice.middleware),
+    getDefaultMiddleware().concat(newsreportSlice.middleware).concat(topBrokerApi.middleware).concat(Blogslice.middleware).concat(weeklyArtical.middleware).concat(tradeideasSlice.middleware).concat(authSlice.middleware).concat(contactSlice.middleware),
 });
 export default store;

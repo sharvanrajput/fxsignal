@@ -11,9 +11,8 @@ import Button from '../navbutton/page';
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from 'react-icons/fa';
 import AuthModal from '@/components/auth/AuthModal';
-import { useSelector, useDispatch } from 'react-redux';
-import { logoutUser as logoutRTK } from '@/services/globaluserauthData'; // your global slice
-import { useLogoutUserMutation } from '@/services/authSlice';
+import { useLogoutUserMutation, useSessiondataQuery } from '@/services/authSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Page() {
     const [showModal, setShowModal] = useState(false);
@@ -209,58 +208,34 @@ export default function Page() {
     ];
 
 
-    const dispatch = useDispatch();
-    const globalUser = useSelector((state) => state.globalauth.user);
-    const [showDropdown, setShowDropdown] = useState(false);
-    const dropdownRef = useRef(null);
-
-
-    const [user, setUser] = useState(() => {
-        if (typeof window !== 'undefined') {
-            try {
-                const stored = localStorage.getItem('user');
-                return stored ? JSON.parse(stored) : null;
-            } catch (err) {
-                console.error('Invalid user in localStorage', err);
-                return null;
-            }
-        }
-        return null;
-    });
-
-    useEffect(() => {
-        if (globalUser) {
-            setUser(globalUser);
-        }
-    }, [globalUser]);
-    const [logoutUserAPI] = useLogoutUserMutation();
+    const { data: sessionData, error, isLoading } = useSessiondataQuery();
+    const [logoutUser] = useLogoutUserMutation();
 
     const handleLogout = async () => {
         try {
-            await logoutUserAPI().unwrap(); // API call
+            await logoutUser().unwrap();
+            setShowDropdown(false);
         } catch (err) {
-            console.warn('Logout API failed (possibly not logged in)');
+            console.error("Logout failed:", err);
         }
-
-        localStorage.removeItem('user');        // Clear localStorage
-        dispatch(logoutRTK());                  // Reset Redux
-        setUser(null);                          // Reset local state
-        setShowDropdown(false);                // Close dropdown
-        console.log('Logout successful');
     };
+
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        function handleClickOutside(event) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
+        }
+        document.addEventListener("mousedown", handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
 
+    const [showDropdown, setShowDropdown] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const isUserLoggedIn = sessionData?.user && error?.status !== 401;
 
     return <>
         <nav className={` ${pathname == "/" ? "  bg-transparent backdrop-blur-lg" : "bg-black"}  shadow-md px-4 md: py-0 z-20 absolute w-full`}>
@@ -284,7 +259,7 @@ export default function Page() {
                                     <li key={index} className="py-2 px-2  cursor-pointer">
                                         <Link href={item.path} className="flex items-center gap-3">
 
-                                            <div className="flex gap-3 items-center">
+                                            <div className="flex gap-3 items-center" onClick={() => setIsOpen(falsen)}>
                                                 <div className="icon ">
                                                     <Image src={item.icon} alt={item.name} width={50} height={50} className="w-13 h-auto" />
                                                 </div>
@@ -300,7 +275,7 @@ export default function Page() {
 
                         </ul>
                     </li>
-                    <li className='group relative inline-block'><Link href="/livesignal" className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
+                    <li className='group relative inline-block'><Link href="/livesignal" onClick={() => setIsOpen(false)} className="hover:text-yellow-100 text-white relative  group inline-block "> <span className="relative z-10">Live Signals</span>
                         <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-light-yellow transition-all duration-300 group-hover:w-[30px]"
                         /></Link>
 
@@ -316,7 +291,7 @@ export default function Page() {
                                     <li key={index} className="py-2 px-2  cursor-pointer">
                                         <Link href={item.path} className="flex items-center gap-3">
 
-                                            <div className="flex gap-3 items-center">
+                                            <div className="flex gap-3 items-center" onClick={() => setIsOpen(false)}>
                                                 <div className="icon ">
                                                     <Image src={item.icon} alt={item.name} width={50} height={50} className="w-13 h-auto" />
                                                 </div>
@@ -342,7 +317,7 @@ export default function Page() {
                             <div className="grid grid-cols-2 gap-4">
                                 {marketDropdown.map((item, index) => (
                                     <Link key={index} href={item.path} className="flex gap-3 p-3 rounded-lg">
-                                        <div className="shrink-0">
+                                        <div className="shrink-0" onClick={() => setIsOpen(false)}>
                                             <Image
                                                 src={item.icon}
                                                 alt={item.name}
@@ -367,7 +342,7 @@ export default function Page() {
                                     <li key={index} className="py-2 px-2  cursor-pointer">
                                         <Link href={item.path} className="flex items-center gap-3">
 
-                                            <div className="flex gap-3 items-center">
+                                            <div className="flex gap-3 items-center" onClick={() => setIsOpen(false)}>
                                                 <div className="icon ">
                                                     <Image src={item.icon} alt={item.name} width={50} height={50} className="w-13 h-auto" />
                                                 </div>
@@ -393,7 +368,7 @@ export default function Page() {
                                     <li key={index} className="py-2 px-2  cursor-pointer">
                                         <Link href={item.path} className="flex items-center gap-3">
 
-                                            <div className="flex gap-3 items-center">
+                                            <div className="flex gap-3 items-center" onClick={() => setIsOpen(false)}>
                                                 <div className="icon ">
                                                     <Image src={item.icon} alt={item.name} width={50} height={50} className="w-13 h-auto" />
                                                 </div>
@@ -419,7 +394,7 @@ export default function Page() {
                                     <li key={index} className="py-2 px-2  cursor-pointer">
                                         <Link href={item.path} className="flex items-center gap-3">
 
-                                            <div className="flex gap-3 items-center">
+                                            <div className="flex gap-3 items-center" onClick={() => setIsOpen(false)}>
                                                 <div className="icon ">
                                                     <Image src={item.icon} alt={item.name} width={50} height={50} className="w-13 h-auto" />
                                                 </div>
@@ -436,20 +411,21 @@ export default function Page() {
                         </ul>
                     </li>
                 </ul>
-                <div ref={dropdownRef} className="relative">
-                    {user ? (
+                <div ref={dropdownRef} className="relative hidden xl:flex gap-4">
+                    {isUserLoggedIn ? (
+                        // ✅ User is logged in - show user dropdown
                         <>
                             <button
                                 onClick={() => setShowDropdown(!showDropdown)}
-                                className="bg-light-yellow px-4 py-3 rounded-md text-black"
+                                className="bg-light-yellow px-4 py-2 rounded-md text-black"
                             >
-                                Welcome {user.fullname?.split(' ')[0] ?? 'User'}
+                                Welcome {sessionData.user.fullname?.split(" ")[0]}
                             </button>
                             {showDropdown && (
                                 <div className="absolute right-0 mt-2 w-40 bg-white border shadow rounded z-50">
                                     <button
                                         onClick={handleLogout}
-                                        className="w-full px-4 py-2 text-left text-red-600 hover:bg-gray-100"
+                                        className="w-full px-4 cursor-pointer text-center py-2 text-left text-red-600 hover:bg-gray-100"
                                     >
                                         Logout
                                     </button>
@@ -457,32 +433,30 @@ export default function Page() {
                             )}
                         </>
                     ) : (
+                        // ✅ User is not logged in - show login/signup buttons
                         <div className="hidden xl:flex gap-4">
-                            <div className="hidden xl:flex gap-4">
-                                <button
-                                    onClick={() => {
-                                        setAuthView('login');
-                                        setShowModal(true);
-                                    }}
-                                >
-                                    <Button href={""} variant="outline" withicon>
-                                        Login
-                                    </Button>
-                                </button>
-                                <button
-                                    onClick={() => {
-                                        setAuthView('register');
-                                        setShowModal(true);
-                                    }}
-                                >
-                                    <Button href={""} variant="primary" withicon>
-                                        Get Started
-                                    </Button>
-                                </button>
-                            </div>
+                            <button
+                                onClick={() => {
+                                    setAuthView("login");
+                                    setShowModal(true);
+                                }}
+                            >
+                                <Button href="" variant="outline" withicon>
+                                    Login
+                                </Button>
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setAuthView("register");
+                                    setShowModal(true);
+                                }}
+                            >
+                                <Button href="" variant="primary" withicon>
+                                    Get Started
+                                </Button>
+                            </button>
                         </div>
                     )}
-
                 </div>
                 {/* Auth Buttons */}
 
@@ -499,7 +473,7 @@ export default function Page() {
 
         </nav >
 
-        <div className={`md:w-[350px] w-[300px] block ${isOpen ? 'translate-x-0' : ' translate-x-[-100%]'} transition-all transition-5 bg-black fixed top-0 h-full z-20`}>
+        <div className={`md:w-[350px] w-[320px] block ${isOpen ? 'translate-x-0' : ' translate-x-[-100%]'} transition-all overflow-y-scroll transition-5 bg-black fixed top-0 h-full z-20`}>
 
             <div className="  mt-4   pb-4 px-4">
                 <div className="flex justify-between items-center mb-4">
@@ -520,7 +494,7 @@ export default function Page() {
                             <li key={index} className="relative group">
                                 <button
                                     onClick={() => handleDropdownToggle(index)}
-                                    className="flex justify-between items-center w-full text-left text-white"
+                                    className="flex justify-between items-center cursor-pointer w-full text-left text-white"
                                 >
                                     {item.title} {item.data && <FaChevronDown />}
                                 </button>
@@ -528,12 +502,12 @@ export default function Page() {
                                 {openIndex === index && item.data && (
                                     <ul className=" top-full left-0 w-full bg-white overflow-hidden z-10 shadow-md rounded-2xl">
                                         {Object.values(item.data).map((subItem, idx) => (
-                                            <li key={idx}>
-                                                <Link href={subItem.path} className="flex items-center gap-3 p-3 hover:bg-gray-100">
+                                            <li key={idx} onClick={() => setIsOpen(false)}>
+                                                <Link href={subItem.path} className="flex items-center gap-3 px-2 py-2 hover:bg-gray-100">
                                                     <Image src={subItem.icon} alt={subItem.name} width={40} height={40} />
-                                                    <div>
-                                                        <div className="font-semibold text-black">{subItem.name}</div>
-                                                        <div className="text-sm text-gray-500">{subItem.description}</div>
+                                                    <div >
+                                                        <div className="font-semibold text-sm text-black">{subItem.name}</div>
+                                                        <div className="text-xs text-gray-500">{subItem.description}</div>
                                                     </div>
                                                 </Link>
                                             </li>
@@ -544,7 +518,58 @@ export default function Page() {
                         ))}
                     </ul>
                 </div>
-                <div className="mt-5 grid grid-cols-1 relative sm:grid-cols-2 gap-3">
+                <div className="mt-5 grid  relative grid-cols-1 gap-3" ref={dropdownRef}>
+
+                    {isUserLoggedIn ? (
+                        // ✅ User is logged in - show user dropdown
+                        <>
+                            <button
+                                onClick={() => setShowDropdown(!showDropdown)}
+                                className="bg-light-yellow px-4 py-2 rounded-md text-black"
+                            >
+                                Welcome {sessionData.user.fullname?.split(" ")[0]}
+                            </button>
+                            {showDropdown && (
+                                <div className="absolute right-0 bottom-[-100%] mt-2 w-40 bg-white border shadow rounded z-50">
+                                    <button
+                                        onClick={handleLogout}
+                                        className="w-full px-4 cursor-pointer text-center py-2  text-red-600 hover:bg-gray-100"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    ) : (
+                        // ✅ User is not logged in - show login/signup buttons
+                        <div className=" grid grid-cols-2 gap-2">
+                            <button
+                                className='w-full'
+                                onClick={() => {
+                                    setAuthView("login");
+                                    setShowModal(true);
+                                }}
+                            >
+                                <Button href="" variant="outline" withicon>
+                                    Login
+                                </Button>
+                            </button>
+                            <button
+                                className='w-full'
+                                onClick={() => {
+                                    setAuthView("register");
+                                    setShowModal(true);
+                                }}
+                            >
+                                <Button href="" variant="primary" withicon>
+                                    Get Started
+                                </Button>
+                            </button>
+                        </div>
+                    )}
+
+                </div>
+                {/* <div className="mt-5 grid  relative grid-cols-2 gap-3">
                     <button onClick={() => {
                         setAuthView("login");
                         setShowModal(true);
@@ -579,14 +604,14 @@ export default function Page() {
 
                         </Button>
                     </button>
-                </div>
+                </div> */}
 
             </div>
         </div>
         <AuthModal
             isOpen={showModal}
-            onClose={() => setShowModal(false)}
             defaultView={authView}
+            onClose={() => setShowModal(false)}
         />
     </>
 

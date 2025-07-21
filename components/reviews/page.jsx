@@ -1,16 +1,14 @@
-"use client"
 
+
+"use client"
 
 import { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { FaStar } from "react-icons/fa6";
 import quote from "@/public/img/Quote.png";
 import Image from 'next/image';
-
 
 const testimonials = [
   {
@@ -34,106 +32,104 @@ const testimonials = [
     image: '/img/user3.png',
     text: `"FX Signals has provided consistently profitable signals, helping me make better trading decisions with confidence. The accuracy and reliability of their trade setups have significantly improved my results, and I now see steady, sustainable growth in my trading account"`,
   },
-
 ];
-const page = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const [navigation, setNavigation] = useState({});
 
-  // Wait for refs to be available before passing to Swiper
-  useEffect(() => {
-    setNavigation({
-      prevEl: prevRef.current,
-      nextEl: nextRef.current,
-    });
-  }, []);
+const page = () => {
+
+
   return (
     <>
-      <section className="review py-[80px]">
-        <div className="container relative">
-          <h2 className="text-4xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[200px] before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">Success Stories</h2>
-          <p className="text-para-dark my-5 text-lg">Real Results. Real Traders. See how FX Signals is transforming trading journeys worldwide!</p>
-          <div className="relative max-w-7xl mx-auto px-4 py-12">
-            {/* Swiper Slider */}
+      <section className="review py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container relative px-4 sm:px-6 lg:px-8 ">
+          <div className=" mb-8 sm:mb-12">
+            <h2 className=" text-4xl lg:text-5xl bg-gradient-to-br from-heading-c1 to-heading-c2 bg-clip-text text-transparent font-bold inline-block relative before:content-[''] before:absolute before:w-[100px] sm:before:w-[150px] md:before:w-[200px] before:h-[20px] sm:before:h-[25px] md:before:h-[30px] before:bg-gradient-to-r before:from-yellow-100 before:to-white before:left-0 before:top-1/2 before:-translate-y-1/4 before:-z-10">
+              Success Stories
+            </h2>
+            <p className="text-para-dark mt-4 sm:mt-6 text-base sm:text-lg md:text-xl ">
+              Real Results. Real Traders. See how FX Signals is transforming trading journeys worldwide!
+            </p>
+          </div>
+
+          <div className="relative">
             <Swiper
-              modules={[Navigation]}
-              spaceBetween={30}
+              modules={[Autoplay]}
+              spaceBetween={20}
               slidesPerView={1}
               loop={true}
-              onBeforeInit={(swiper) => {
-                // Assign navigation manually before Swiper initializes
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-              }}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
               }}
               breakpoints={{
-                768: { slidesPerView: 1 },
-                1024: { slidesPerView: 1.5 },
+                640: { 
+                  slidesPerView: 1,
+                  spaceBetween: 20 
+                },
+                768: { 
+                  slidesPerView: 1,
+                  spaceBetween: 25 
+                },
+                1024: { 
+                  slidesPerView: 1.2,
+                  spaceBetween: 30 
+                },
+                1280: { 
+                  slidesPerView: 1.5,
+                  spaceBetween: 35 
+                },
               }}
             >
               {testimonials.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-gradient-to-r h-full from-black to-heading-c2 text-white rounded-2xl p-6 h-full flex flex-col justify-between shadow-lg">
-                    <div className="flex flex-col md:flex-row gap-4">
-                      <div className=''>
+                  <div className="bg-gradient-to-r from-black to-heading-c2 text-white rounded-2xl p-4 sm:p-6 md:p-8 h-full flex flex-col justify-between shadow-lg min-h-[300px] sm:min-h-[350px] md:min-h-[350px]">
+                    <div className="flex flex-col sm:flex-row gap-6  h-full">
+                      <div className="flex-shrink-0 text-center ">
                         <Image
                           src={item.image}
                           alt={item.name}
                           width={150}
                           height={150}
-                          className="max-w-[200px] max-h-[200px] rounded-xl object-cover"
+                          className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-xl object-cover mx-auto sm:mx-0"
                         />
-                        <h4 className="text-lg font-bold mt-5">{item.name}</h4>
-                        <p className="text-yellow-400">{item.role}</p>
+                        <h4 className="text-base sm:text-lg md:text-xl font-bold mt-3 sm:mt-4 md:mt-5">
+                          {item.name}
+                        </h4>
+                        <p className="text-yellow-400 text-sm sm:text-base">
+                          {item.role}
+                        </p>
+                        <div className="flex items-center justify-center gap-1">
+                            {[...Array(item.star)].map((_, i) => (
+                              <FaStar key={i} className="text-amber-400 text-sm sm:text-base" />
+                            ))}
+                          </div>
                       </div>
-                      <div className='relative'>
-                        <p className="text-sm md:text-base  md:mb-4 mb-0">{item.text}</p>
-                        <div className="mt-6 w-full md:absolute md:top-[40%]">
-                          <div className="flex justify-between">
-                            <div className='flex items-center  '>
-                              {[...Array(item.star)].map((_, i) => (
-                                <FaStar key={i} className='text-amber-400' />
-                              ))}
-                            </div>
-                            <div className=''>
-                              <Image src={quote} alt='quots' />
-                            </div>
+                      
+                      <div className="flex-1 relative flex flex-col justify-between">
+                        <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-2 sm:mb-2">
+                          {item.text}
+                        </p>
+                        
+                        <div className="flex items-center justify-between mt-auto">
+                          
+                          <div className="flex-shrink-0">
+                            <Image 
+                              src={quote} 
+                              alt="quotes" 
+                              width={30}
+                              height={30}
+                              className="w-6 h-6 sm:w-8 sm:h-8 opacity-70"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* Custom Navigation Buttons */}
-            <div className="absolute top-1/2 md:-left-[50px] left-[0px]  -translate-y-1/2 z-10">
-              <button
-                ref={prevRef}
-                className="bg-yellow-400 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md hover:bg-yellow-500"
-              >
-                <FaArrowLeft />
-              </button>
-            </div>
-
-            <div className="absolute top-1/2 md:-right-[50px] right-[0px]  -translate-y-1/2 z-10">
-              <button
-                ref={nextRef}
-                className="bg-yellow-400 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md hover:bg-yellow-500"
-              >
-                <FaArrowRight />
-              </button>
-            </div>
           </div>
         </div>
       </section>
-
     </>
   )
 }

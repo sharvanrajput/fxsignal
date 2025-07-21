@@ -16,7 +16,7 @@ const page = () => {
                 <div className="max-w-9xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 ">
 
                     {/* Left Text Content */}
-                    <div className="space-y-6 lg:ps-[110px] sm:ps-[70px] ps-[20] self-center">
+                    <div className="space-y-6 lg:ps-[110px] sm:ps-[70px] ps-[10] overflow-x-hidden self-center">
                         <h1 className="  text-3xl  md:text-4xl font-bold text-white leading-tight">
                             Unlock Forex Signals <br className="xl:block hidden" /> to&nbsp;
                             <span className=" md:h-[38px] h-[25px]   overflow-hidden   inline-block">
@@ -30,15 +30,12 @@ const page = () => {
                         <p className="text-para text-lg">
                             We provide cutting-edge digital services to help you grow, innovate, and lead in your industry.
                         </p>
-                        <div className="hidden md:flex gap-4">
-                            <Button href="/Get Started" variant="primary" withicon={false}>Watch Free Signals</Button>
-                            <Button href="/Login" variant="outline" withicon={false}>Explore More</Button>
+                        <div className=" flex gap-4">
+                            <Button href="" variant="primary" withicon={false}>Watch Free Signals</Button>
+                            <Button href="" variant="outline" withicon={false}>Explore More</Button>
                         </div>
-                        <p className="text-white">Download on</p>
-                        <div className="flex gap-3 ">
-                            <Image src={googleplay} className="w-[130px]" alt="" />
-                            <Image src={appStore} className="w-[130px]" alt="" />
-                        </div >
+                        
+                        
 
                     </div>
 

@@ -65,7 +65,7 @@ const NewsList = () => {
     if (isLoading) return <div className='loading'></div>;
 
     return (
-        <div className="p-6 border-2 border-gray-200 rounded-2xl">
+        <div className="py-6 px-3 lg:px-6 border-2 border-gray-200 rounded-2xl">
             {/* Header */}
             <div className="flex justify-between items-center mb-5">
                 <h2 className="text-2xl font-semibold">Market News & Events</h2>

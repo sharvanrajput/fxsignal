@@ -20,7 +20,7 @@ const Page = () => {
 
 
     return (
-        <div className="topbrocker bg-[#f9f9f9] pb-10 rounded-bl-2xl px-5 rounded-br-2xl">
+        <div className="topbrocker bg-[#f9f9f9] pb-10 rounded-bl-2xl md:px-5 px-2 rounded-br-2xl">
             <div className="border-t-0 rounded-2xl border-gray-300">
                 <div className="flex justify-between items-center mb-3 py-3">
                     <h2 className="text-2xl font-semibold bg-gradient-to-r from-heading-c1 to-heading-c2 bg-clip-text text-transparent">

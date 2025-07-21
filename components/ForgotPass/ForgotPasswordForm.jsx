@@ -1,14 +1,26 @@
 import Image from 'next/image';
 import forgotSvg from '@/public/img/Forgot-Password.png';
+import { useForgotPasswordMutation } from '@/services/authSlice';
 
 const ForgotPasswordForm = ({ goBack, onNext }) => {
+
+  const [forgotPassword, { isLoading, isError }] = useForgotPasswordMutation()
   
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
+    await forgotPassword({email})
+
     onNext(email);
   };
-
+  if (isLoading) {
+    return <div className="loader"></div>
+  }
+  if (isError) {
+    return <h1>Something went wrong</h1>
+  }
   return (
     <div className="flex w-full">
       <div className="w-1/2 bg-white p-10">
