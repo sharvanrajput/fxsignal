@@ -39,7 +39,7 @@ const OtpForm = ({ email, goBack, onVerify }) => {
         <Image src={otpSvg} alt="otp" className="w-full h-auto" />
       </div>
       <div className="w-1/2 p-10">
-        <h2 className="text-2xl font-bold text-yellow-800 mb-2">OTP Verification</h2>
+        <h2 className="md:text-4xl  text-2xl font-bold bg-gradient-to-tl bg-clip-text from-heading-c2 to-heading-c1 mb-2">OTP Verification</h2>
         <p className="text-gray-500 mb-4">Enter the 6-digit OTP sent to:</p>
         <p className="text-sm text-gray-600 mb-6">{email}</p>
 

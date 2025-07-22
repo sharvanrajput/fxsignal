@@ -111,7 +111,7 @@ const RegisterForm = ({ goToLogin }) => {
       </div>
 
       <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-10">
-        <h2 className="text-2xl font-bold text-yellow-800 mb-2">Create Your Account</h2>
+        <h2 className="md:text-4xl  text-2xl font-bold bg-gradient-to-tl bg-clip-text from-heading-c2 to-heading-c1 mb-2">Create Your Account</h2>
         <p className="text-gray-500 mb-6">
           Get access to real-time trade signals, insights, and premium tools.
         </p>

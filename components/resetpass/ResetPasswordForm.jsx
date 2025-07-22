@@ -6,7 +6,7 @@ import resetSvg from "@/public/img/reset-pas.png";
 import { useResetPasswordMutation } from "@/services/authSlice";
 
 
-const ResetPasswordForm = ({ goToLogin  }) => {
+const ResetPasswordForm = ({ goToLogin }) => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -64,7 +64,7 @@ const ResetPasswordForm = ({ goToLogin  }) => {
       </div>
 
       <div className="w-1/2 p-10">
-        <h2 className="text-2xl font-bold text-yellow-800 mb-2">
+        <h2 className="md:text-4xl  text-2xl font-bold bg-gradient-to-tl bg-clip-text from-heading-c2 to-heading-c1 mb-2">
           Reset Your Password?
         </h2>
         <p className="text-gray-500 mb-6">
